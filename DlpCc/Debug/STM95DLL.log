@@ -1,4 +1,4 @@
-﻿La génération a démarré 26/02/2016 10:02:38.
+﻿La génération a démarré 29/02/2016 15:09:54.
      1>Projet "C:\Users\nmiel\Documents\Developpement\DLPCC_vs12\DlpCc\STM95DLL.vcxproj" sur le nœud 2 (Build cible(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W4 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /C /Gm /EHsc /MTd /GS- /fp:precise /Zc:wchar_t- /Zc:forScope /Fo".\Debug/" /Fd".\Debug/vc110.pdb" /Gd /TP /analyze- /errorReport:prompt /YX apiDLPCC.cpp
@@ -334,16 +334,16 @@
      1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(248): warning C4706: assignation au sein d'une expression conditionnelle
      1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(1730): warning C4706: assignation au sein d'une expression conditionnelle
      1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2143): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2238): warning C4700: variable locale 's' non initialisée utilisée
      1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2316): warning C4706: assignation au sein d'une expression conditionnelle
      1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2319): warning C4706: assignation au sein d'une expression conditionnelle
      1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2389): warning C4706: assignation au sein d'une expression conditionnelle
-     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2238): warning C4700: variable locale 's' non initialisée utilisée
      1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2430): warning C4706: assignation au sein d'une expression conditionnelle
      1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2468): warning C4706: assignation au sein d'une expression conditionnelle
-     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2504): warning C4706: assignation au sein d'une expression conditionnelle
      1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2540): warning C4706: assignation au sein d'une expression conditionnelle
      1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2576): warning C4706: assignation au sein d'une expression conditionnelle
      1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2613): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2504): warning C4706: assignation au sein d'une expression conditionnelle
      1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2650): warning C4706: assignation au sein d'une expression conditionnelle
      1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2919): warning C4706: assignation au sein d'une expression conditionnelle
      1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2840): warning C4706: assignation au sein d'une expression conditionnelle
@@ -372,4 +372,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:02.77
+Temps écoulé 00:00:07.74

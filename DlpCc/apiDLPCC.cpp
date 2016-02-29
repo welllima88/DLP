@@ -3498,7 +3498,7 @@ void timeL (char *hhmmss)
 
 
 // permet l'annulation des cartes dans la base de données smocs
-DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]){
+DLPCCDLL_API int WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]){
 	
 	char szC3Cfg[9];
 	char Response[34];
@@ -3530,7 +3530,7 @@ DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]
 	ret = -1 ;
 
 	if( ! (fp = fopen("c3Config", "r" )))
-		return FALSE;
+		return -1;
 
 	while ( fgets (line , sizeof line , fp) ) 
 	{
@@ -3567,7 +3567,7 @@ DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]
 		else ::WSACleanup();
 	}
 
-	if (!m_bStartedUp) return FALSE;
+	if (!m_bStartedUp) return -1;
 
 
 	/* La socket ne doit pas être déjà ouverte */
@@ -3598,7 +3598,7 @@ DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]
 		Close_IP();
 		sprintf(errorMsg,"Connexion a la socket %s impossible",ConfigSocket);
 		MessageBox(0, errorMsg, "Error", 0);
-		return FALSE;
+		return -1;
 
 	}
 
@@ -3609,7 +3609,7 @@ DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]
 		m_hSocket = INVALID_SOCKET;
 		sprintf(errorMsg,"Connexion au stratus impossible",ConfigSocket);
 		MessageBox(0, errorMsg, "Error", 0);
-		return FALSE;
+		return -1;
 
 	}
 
@@ -3618,7 +3618,7 @@ DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]
 	{
 		::closesocket(m_hSocket);
 		m_hSocket = INVALID_SOCKET;
-		return FALSE;
+		return -1;
 
 	}
 
@@ -3630,7 +3630,7 @@ DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]
 		MessageBox(0, errorMsg, "Error", 0);
 		::closesocket(m_hSocket);
 		m_hSocket = INVALID_SOCKET;
-		return FALSE;
+		return -1;
 	}
 
 	memset(Response,0x00,sizeof(Response));
@@ -3641,14 +3641,14 @@ DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]
 		Abort();
 		sprintf(errorMsg,"Erreur lors de la reception des donnees du serveur");
 		MessageBox(0, errorMsg, "Error", 0);
-		return FALSE;
+		return -1;
 	} 
 
 	Close_IP();
 
 	if( strcmp(&Response[30], "00") != 0){
-		return FALSE;
+		return -1;
 	}
 
-	return TRUE;
+	return 1;
 }
