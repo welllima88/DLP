@@ -540,7 +540,13 @@ extern "C" DLPCCDLL_API int Dlp_Cc(lpCcPosMsgSend lpGalxSend,
 
 		GetWindowText(GetParent(GetFocus()),Msg,50);
 		Ret = MessageBox(NULL, Msg,"Focus sur la fenêtre", MB_OK); 
-		*/  
+		*/ 
+
+		/*char trame[409];
+		memset(trame, 0x00, 409);
+		memcpy(trame ,"M0502000000014757337", 23);
+		memcpy(&trame[294] , "2", 1);
+		Dlp_His_Canceled_Card(trame, "267642610");*/
 
 		memset(Msg,0x00,sizeof(Msg));
 		memset(szMsg,0x20,sizeof(szMsg)); 
@@ -3646,7 +3652,7 @@ DLPCCDLL_API int WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9])
 
 	Close_IP();
 
-	if( strcmp(&Response[30], "00") != 0){
+	if( memcmp(&Response[30], "00", 2) != 0){
 		return -1;
 	}
 
