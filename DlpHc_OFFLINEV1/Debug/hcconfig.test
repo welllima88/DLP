@@ -1,0 +1,14 @@
+ #****************************************
+# FICHIER DE CONFIGURATION Hotel Charge *
+#---------------------------------------*
+# Cr‚‚ le 24 octobre 2001               *
+# par SJ                                *
+#****************************************
+
+# Stratus
+STRATUS_COM=c:\users STRATUSV610 5109
+
+# Stratus de secours
+# STRATUS_COM2=socket du stratus
+
+

@@ -1,0 +1,9 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Disneyland Paris\DlpHc]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Disneyland Paris\DlpHc\Settings]
+"ServerIP"="157.23.43.20"
+"ServerPort"="2605"
+"Version"="1.0 beta"
+

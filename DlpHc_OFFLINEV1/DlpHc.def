@@ -1,0 +1,13 @@
+;*****
+;* DlpHc - DLL Hotel Charges
+;* Nommage non "décoré" des API exportées par DLPHC.DLL
+;* Fabrice DI GIULIO (FDG) - Avril 2001
+;*****
+
+LIBRARY DlpHc
+
+
+DESCRIPTION " "
+
+EXPORTS
+Dlp_Hc	@ 666

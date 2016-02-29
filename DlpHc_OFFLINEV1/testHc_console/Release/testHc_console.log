@@ -1,0 +1,12 @@
+﻿La génération a démarré 26/02/2016 15:16:56.
+     1>Projet "C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\testHc_console\testHc_console.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release/testHc_console.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\Release/testHc_console.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Release\testHc_console.lib" /MACHINE:X86 /SAFESEH .\Release/StdAfx.obj
+         .\Release/testHc_console.obj
+         DlpHc.lib
+         testHc_console.vcxproj -> C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\testHc_console\.\Release\testHc_console.exe
+     1>Génération du projet "C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\testHc_console\testHc_console.vcxproj" terminée (Build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:00.30

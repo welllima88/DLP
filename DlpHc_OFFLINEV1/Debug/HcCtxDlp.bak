@@ -1,0 +1,19 @@
+ #****************************************
+# FICHIER DE CONFIGURATION Hotel Charge *
+#---------------------------------------*
+# Cr‚‚ le 24 octobre 2001               *
+# par SJ                                *
+#****************************************
+
+# Stratus
+#STRATUS_COM=EnvQA STRATUSV610 9819
+#STRATUS_COM=EnvGCB STRATUSV610 9754
+#STRATUS_COM=EnvREC STRATUSV610 9102
+STRATUS_COM=PROD STRATUSV615 4299
+
+# Stratus de secours
+# STRATUS_COM2=socket du stratus
+
+
+AUTORISATION=0 
+FORCAGE=0 
