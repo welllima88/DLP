@@ -1,0 +1,412 @@
+############################################################################
+#                                                                           
+# Fichier de configuration de C3 - Copyright 2007 Ingenico BU Retail        
+#  - les lignes commencant par '#' sont des commentaires                   
+#  - (xx) = valeur utilisée par défaut si la ligne est commentée.           
+#  - Un descriptif complet des paramètres est fourni dans la doc C3API41.doc
+############################################################################
+
+
+############################################################################
+################  CONFIGURATION COMMUNICATION SERVEUR AXIS  ################
+############################################################################
+
+# ***************** Parametres standards *****************
+# Serveur AXIS Primaire (nom du serveur ou adresse @ ou IP)
+
+#### SSL : 9590:sans SSL, 9596:avec SSL
+# 0 : Sans SSL C3-Axis (xx)
+# 1 : avec SSL
+SSL_MODE=0
+
+# Serveur 
+#AXIS_COM=REC stratusv610 2606
+#AXIS_COM=LT_QA5 stratusv610 2610
+AXIS_COM=IPP350_AXEMV_QA stratusv610 9716
+#AXIS_COM=IAGO localhost 20001
+#AXIS_COM=IPP350_TRON2_REC stratusv610 9717
+#AXIS_COM=IPP350_REC_CBCOMIP stratusv610 9706
+#AXIS_COM=WSPQA stratusv610 2560
+#AXIS_COM=IPP350_JESSICA stratusv615 4021
+#AXIS_COM=IPP350_FANTASIA stratusv615 4306
+
+AXIS_COM=IPP350_LACANTINA_QA_emv stratusv610 9815
+
+
+# ****************** Parametres avances ******************
+
+# Connexion systematique Axis Primaire
+AXIS_RECONNECT=1
+
+# Timeout lors de la connexion
+TIME_OUT_IP=5
+
+# Timeout lors de la connexion pour les initialisations
+TIME_OUT_IP_INIT=5
+
+# Timeout de déconnexion si pas de réponse Axis (en secondes)
+TIME_OUT_CNX=30
+
+# 0 : C3 multi-session
+# 1 : C3 mono-session (¤¤) 
+C3NET_MONOSESSION=1
+
+# Timeout (en ms) des POS Display C3Net
+C3NET_POSDISPLAY_TIMEOUT=5000
+
+# port de communication 
+# le port série (x) est adresse de la manière suivante selon les environnements :
+#L10_COM=COMx 115200/8/1/0      : Windows
+#L10_COM=COMx: 115200/8/1/0     : Win CE
+L10_COM=COM5 115200/8/1/0
+
+
+#TCP_COM=IPP350 10.228.216.202 9599
+
+
+#### SSL : 9599:sans SSL, 959X:avec SSL
+# 0 : Sans SSL C3Drvier-TPE (xx)
+# 1 : avec SSL
+TPE_SSL_MODE=0
+
+############################################################################
+############################  CONFIGURATION C3  ############################
+############################################################################
+
+# ***************** Parametres standards *****************
+
+# Liste des applications activees
+#CARTES=AME
+CARTES=EMV SSC AME JCE
+
+#  -------------------------------------+-----------+
+#  Nom d'application                    |  libelle  |
+#  -------------------------------------+-----------+
+#  Accord Piste                         | ACP		|
+#  Accord B0'                           | CBA		|
+#  Accord EMV                           | ACE		|
+#  Accord Sans Contact                  | ASC		|
+#  Administration                       | ACM		|
+#  Alphyra                              | APH		|
+#  American Express                     | AMX		|
+#  American Express EMV                 | AME		|
+#  Auchan Telecom                       | CAT		|
+#  Aurore CETNCB                        | CTM		|
+#  Aurore REFLEX                        | CTF		|
+#  Calédonienne des Services Bancaires  | CSB		|
+#  CB5.2 B0'                            | BNC		|
+#  Carte employe ED                     | CED		|
+#  Credipar                             | PSA		|
+#  Fidelite CASINO                      | CAF		|
+#  PNF Credit Mutuel                    | CDM		|
+#  Eolys                                | EOL		|
+#  Everest                              | CEV		|
+#  Carte cadeau DTV                     | DTV		|
+#  Carte GL                             | GLF		|
+#  CB5.2 EMV                            | EMV		|
+#  Certegy                              | CTG		|
+#  Cofinoga piste                       | COF		|
+#  Cofinoga EMV                         | CFE		|
+#  Cheque bancaire                      | CHQ		|
+#  China Union Pay Cedicam              | CUP		|
+#  China Union Pay Natixis              | CUN		|
+#  Diners Club                          | DCF		|
+#  DCC FCC                              | FCC		|
+#  DCC Fexco                            | FXO		|
+#  DCC Fintrax                          | FTX		|
+#  Edel (Leclerc)                       | EDL		|
+#  Franfinance                          | FFI		|
+#  Finaref                              | FNF		|
+#  Fnac Fidelite                        | FNC		|
+#  Gestion des avoirs CONFORMA          | GAV		|
+#  InterCall                            | ITC		|
+#  JCB Piste                            | JCB		|
+#  JCB EMV                              | JCE		|
+#  Multissime                           | MTS		|
+#  Pass Piste                           | PAS		|
+#  Promostim                            | PMS		|
+#  Prosodie                             | PSD		|
+#  PME Moneo                            | PME		|
+#  PNF Optalion                         | OPT		|
+#  Sofinco                              | SCO		|
+#  sodelem                              | SDM		|
+#  Total Gr                             | ELF		|
+#  Natixis                              | NTX		|
+#  Application PLBS                     | LBS		|
+#  Navigo RATP                          | NAV		|
+#  VAD Bancaire                         | VAD		|
+#  SSC CB Sans Contact                  | SSC		|
+#  MPA Autoroute scenario 1             | EM1   |
+#  MPA Autoroute scenario 2             | EM2   |
+#  -------------------------------------+-----------+
+
+# Numéro de terminal (8 chiffres)
+QTPV=40071161
+# Numéro de caissière (8 chiffres)
+QCASH=00000001
+
+#########################  PARAMETRES APPLICATIFS  #########################
+# Liste des applications
+8208=ADM 0 q # 0001
+0768=ACP V A # 0007
+0798=ACE p 3 # 0107
+0208=AMX 6 2 # 0007
+0293=AME 6 2 # 0007
+3608=APH k R h 0007
+0193=EMV T E # 0107
+0196=EMV T E # 0107
+0173=VAD T V # 0127 1
+0148=LBS G s # 0107 80148
+0508=DCF 7 6 # 0007 
+5008=CAT u a n 0007
+4808=CED r b # 0067
+#9999=CEV # # o 0007
+0693=CFE l X # 0007
+0308=CHQ N C # 0007
+0310=CHQ N C # 0007
+0608=COF 2 5 # 0007
+0408=CTF 8 4 # 0007
+#0418=CTM 8 4 # 0007
+#9999=CTG # # l 0007
+0508=DCF 7 6 # 0007
+9999=DTV # # j 0007
+9999=EDL # # O 0007
+1508=FNF F F R 0003
+1208=FNC g B # 0007
+1402=GAV z k s 0007
+#9999=GLF # # p 0007
+#9999=MGL # # r 0007
+#9999=PME # # W 0007
+#9999=PMS # # d 0007
+#9999=PSC # # q 0007
+3508=PSD j J k 0007
+1108=JCB D 9 # 0007
+1113=JCE D 9 # 0007
+1008=FFI 9 8 # 0107
+3708=CUP m O # 0007
+0184=FCC f L # 0107
+4908=NAV ! r # 0001
+1608=SCO B S # 0007 
+0195=SSC J Z # 0107
+0197=SSC J Z # 0107
+0183=FXO f K # 0107
+0191=EM1 J t # 0107 1
+0192=EM2 K u # 0107 2
+#0200=GAX XX v # 0107
+0210=MTS U x # 0107
+3908=PSA t 8 # 0007
+#0418=CTM 8 4 # 07
+#0408=CTF 8 4 # 07
+#9999=NSE XXXX w #  0107
+ 
+
+
+
+# ****************** Parametres avances ******************
+
+#### Parametres tickets ####
+#nom du fichier de sortie contenant le ticket client "XXX" et commercant "XXX.com"
+LPR_COM=ticket1
+
+LPR_LINE=1
+
+# Activation / desactivation ticket commercant 
+# 0 : pas de génération du ticket commerçant
+# 1 : génération du ticket commerçant  (xx)
+TICKET_COMM=1
+
+# Aiguillage des tickets  
+# 0 : pas d'impression des tickets (xx)
+# 2 : impression des tickets sur le TPE equipé d'une imprimante
+PRINTER_MODE=0
+
+# Aiguillage Affichage et saisie  
+# 0 : Affichage et saisie sur le clavier de la caisse (xx)
+# 1 : Affichage et saisie sur le clavier du TPE
+DISPLAY_MODE=0
+
+# Activation du buzzer  
+# 0 : Désactivé 
+# 1 : Alarme uniquement (xx)
+# 2 : Alarme + clavier
+BUZZER_MODE=2
+
+#### fonctionnement dégradé ####
+# Type de traitement en cas de rupture de dialogue avec AXIS
+# 0 : pas de mode dégradé (appel sur primaire puis secondaire)  
+# 2 (Equivalent à 1 ADM AXIS) : Mode Off line activé sans validation de chaque transaction (Passage en off-line protégé par Num.  Commerçant) 
+# 3 : Mode Off line activé avec validation de chaque transaction(Passage en off-line protégé par Num.  Commerçant)
+# 5 : Mode Off line activé sans validation de chaque transaction    (Passage en off-line  non protégé )
+# 7 : Mode Off line activé avec validation de chaque transaction    (Passage en off-line  non protégé )
+# Config Online-Offline (RATP) Octet OffLine :   0011 –XXXX     ( 0x3X)
+# 9 : Mode Off line activé sans validation de chaque transaction (Passage en off-line protégé par Num.  Commerçant) 
+# B : Mode Off line activé avec validation de chaque transaction(Passage en off-line protégé par Num.  Commerçant)
+# D : Mode Off line activé sans validation de chaque transaction    (Passage en off-line  non protégé )
+# F : Mode Off line activé avec validation de chaque transaction    (Passage en off-line  non protégé )
+AXIS_OFF=0
+
+
+############################################################################
+###########################  PARAMETRES DIVERS  ############################
+############################################################################
+
+# 0 : fonctionnement de c3 en mode normal (interactif)  (xx)
+# 1 : fonctionnement de c3 en mode automate
+# 2 : fonctionnement de c3 en mode automate avec lecteur motorise
+# 3 : fonctionnement de c3 en mode normal sans interactivité
+AUTOMATE=0
+
+####  Trace Fichier dYYMMDD.log   #######
+# 0 : pas de traces  (xx)
+# 1 : Erreurs fatales
+# 2 : Simples Erreurs
+# 3 : warnings
+# 4 : info
+# 5 : debug
+TRACE=7
+#TRACE_PURGE=2
+#TRACE_OUTPUT_TYPE=FILE
+#TRACE_PATH=log
+#TRACE_MULTI_THREAD=0
+
+# Timeout d'insertion d'une carte dans le lecteur (en secondes)
+# par défaut 30 s
+#TIMEOUT_CARTE=45
+
+# Messages de repos
+REPOS_1=Disneyland Paris
+REPOS_2=  Bienvenue
+
+############################################################################
+#########################  PARAMETRES APPLICATIFS  #########################
+############################################################################
+
+# Longueur du message d'initialisation
+LENT_INIT=5
+
+# Edition des tickets des transactions non abouties
+# 0 : Pas de génération du ticket 
+# 1 : Génération du ticket  (xx)
+TICKET_TNA=1
+
+################ EMV ################
+# Impression du ticket TNA offline
+# 0 : non (xx)
+# 1 : oui
+#TICKET_TNA_OFF=0
+
+################ EMV et PGS ################
+# Acceptation / refus des cartes de test 
+# 0 : Refuse
+# 1 : Accepte (xx)
+CARTE_TEST=1
+
+################ CAT, CED, GLF ################
+# Prefixe du terminal pour le changement dynamique des n° TPV
+PREFIX_TPV=1234
+
+# Fonction appelée par l'outil fptpv. 
+#1 : CLASSIQUE
+#2 : C3DRIVER
+C3API_VERSION=1
+
+# 0 : pas de callback, fonctionnement standard c3config
+# 1 : callback actif, fonctionnement RATP 
+#CALLBACK_GET_SALES_CONFIRM=1
+
+# Package utilisé pour le chargement local
+#TELIUM_TELECH_DIR=telium.zip
+
+# Serveur téléchargement FTP
+#TELIUM_TELECH_FTP=ftp://admin:admin@10.10.201.21:2121/ftpPathFile
+
+################ TELECHARGEMENT ################
+# Telechargement local déclenche par Axis (ADM)
+# 0 : Non
+# 1 : Oui
+#CHGT_CAL_AXIS=0
+
+
+
+############## nombre de colonnes de l’afficheur de la caisse #
+# 16 : valeur par defaut (xx)
+# n :  valeur comprise entre 16 et 24
+CASHIER_DISPLAY_NB_COLUMN=20
+
+# Attente du retrait de la carte à puce avant de rendre la main à l'encaissement
+# 0 : retourne à l'encaissement même si la carte est encore dans le pinpad
+# 1 : reste dans C3 tant que la carte n'est pas retirée du pinpad
+#WAIT_REMOVE_CARD=1
+
+# Liste noire  lncba, lnace, lnasc, lnemv
+#LNOIRE_C3=lnemv
+
+#concatenation <> aux messages de confirmation
+# 0 : Pas de concatenation (xx)
+# 1 : concatenation <> aux messages
+MSG_INF_SUP_INF=1
+
+# Paramétrage du lancement de la transaction avec carte déjà insérée
+# 0  => lancement d’une transaction meme si la carte est présente avant paiement
+# 1  => rejet d’une transaction si la carte est présente avant paiement avec erreur (0311/2010) (xx)
+CHECK_INSERT=1
+
+#### Securisation ####
+# Parametrage de la fonction GetSecurity du C3 en QT
+# VALID    : pas de mot de passe
+# DEFAULT  : mot de passe = 4097
+# xxxxx    : valeur numérique utilisée pour le calcul du mot de passe 
+GSQT=VALID
+
+# Mise à l'heure du terminal par le système d'encaissement 
+# 0= Pas de mise a l'heure
+# 1= mise a l'heure de C3 lors de l'init  (xx)
+SET_DATE_TIME=0
+
+# Prise en compte ou non des temporisations dans les demandes 
+# d'affichage du TPE selon le parametre fourni dans la fonction 03
+# 0 : Temporisation non prise en compte (xx)
+# 1 : Temporisation prise en compte
+P9_DISPLAY_DELAY=0
+
+# Retour a l'ecran de repos apres une saisie/affichage sur le terminal (fonction 05)
+# 0 : Pas de retour a l'ecran de repos pour enchainer plusieurs saisies (xx)
+# 1 : Retour a l'ecran de repos
+P9_IDLE_AFTER_F05=0
+
+# Configuration du type de protocole 9
+# 0 : simplifie sans sequences ENQ-ACK-EOT (xx)
+# 1 : standard avec sequences ENQ-ACK-EOT
+P9_PROTOCOL_TYPE=0
+
+# Code langue. Si absent utilise langue par défaut du terminal.
+# fr : Français
+# en : English
+#CODE_LANGUE=fr
+
+#Format Date. Si absent format défini dans le terminal
+# 0 : Format Francais JJ/MM/AAAA
+# 1 : Format Francais AAAA/MM/JJ
+#FORMAT_DATE=0
+
+# Callback de confirmation d'enregistrement de transaction.
+# 0 : pas de callback, fonctionnement pour compatibilité APPLE
+# 1 : callback actif, fonctionnement (xx)
+#CALLBACK_INDICATION_CONFIRM=1
+
+# Suport Callback d'impression de ticket en C3NET
+# 0 : pas de callback, Compatibilté ascendante (xx)
+# 1 : callback actif, fonctionnement APPLE
+#CALLBACK_PRINT_SUPPORT=1
+
+# TELIUM_TELECH_DIR=FondBuzz.Zip
+
+# Serveur téléchargement FTP
+# TELIUM_TELECH_FTP=ftp://UserSPM:Disney_UserSPM@sw-frmv-217548/ict250-perroquet.zip
+# TELIUM_TELECH_FTP=ftp://UserSPM:Disney_UserSPM@sw-frmv-217548/FondStarWars2.zip
+# TELIUM_TELECH_FTP=ftp://UserSPM:Disney_UserSPM@sw-frmv-217548/FondNemo.zip
+#TELIUM_TELECH_FTP=ftp://UserSPM:Disney_UserSPM@sw-frmv-217548/FondJessica.zip
+#TELIUM_TELECH_FTP=ftp://UserSPM:Disney_UserSPM@sw-frmv-217548/FondRoger.zip
+TELIUM_TELECH_FTP=ftp://UserSPM:Disney_UserSPM@sw-frmv-217548/FondLogoSM.zip
+
+

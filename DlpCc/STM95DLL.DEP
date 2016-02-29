@@ -1,0 +1,14 @@
+# Microsoft Developer Studio Generated Dependency File, included by STM95DLL.MAK
+
+.\apiDLPCC.cpp : \
+	"..\..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	".\apiDLPc3.h"\
+	".\apiDLPCC.h"\
+	".\DlpCcDLLpriv.h"\
+	".\galaxy.h"\
+	
+
+.\DLPCCDLL.cpp : \
+	"..\..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	".\DlpCcDLLpriv.h"\
+	

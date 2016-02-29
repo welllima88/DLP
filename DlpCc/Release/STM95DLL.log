@@ -1,0 +1,363 @@
+﻿La génération a démarré 24/02/2016 15:47:33.
+     1>Projet "C:\Users\nmiel\Documents\Developpement\DLPCC_vs12\DlpCc\STM95DLL.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W4 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _WINDLL /GF /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release/" /Fd".\Release/vc110.pdb" /FR".\Release\\" /Gd /TP /analyze- /errorReport:prompt apiDLPCC.cpp
+         apiDLPCC.cpp
+     1>apiDLPCC.cpp(116): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(124): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(131): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(202): warning C4127: l'expression conditionnelle est une constante
+     1>apiDLPCC.cpp(209): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(216): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(311) : voir la déclaration de 'sscanf'
+     1>apiDLPCC.cpp(217): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(219): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(253): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(110) : voir la déclaration de 'strcpy'
+     1>apiDLPCC.cpp(265): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(283): warning C4100: 'FileToPrint' : paramètre formel non référencé
+     1>apiDLPCC.cpp(386): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\time.inl(112) : voir la déclaration de 'localtime'
+     1>apiDLPCC.cpp(396): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _itoa. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdlib.h(909) : voir la déclaration de 'itoa'
+     1>apiDLPCC.cpp(397): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _itoa. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdlib.h(909) : voir la déclaration de 'itoa'
+     1>apiDLPCC.cpp(398): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _itoa. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdlib.h(909) : voir la déclaration de 'itoa'
+     1>apiDLPCC.cpp(399): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _itoa. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdlib.h(909) : voir la déclaration de 'itoa'
+     1>apiDLPCC.cpp(445): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(448): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(558): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(562): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(563): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(564): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(569): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(573): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(581): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(585): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(589): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(590): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(591): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(612): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(653): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(660): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(663): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(666): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(669): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(706): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(1031): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(1048): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(1070): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(1075): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(1076): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(1079): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(311) : voir la déclaration de 'sscanf'
+     1>apiDLPCC.cpp(1274): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(311) : voir la déclaration de 'sscanf'
+     1>apiDLPCC.cpp(1247): warning C4101: 'szMsg' : variable locale non référencée
+     1>apiDLPCC.cpp(1343): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(311) : voir la déclaration de 'sscanf'
+     1>apiDLPCC.cpp(1295): warning C4101: 'szMsg' : variable locale non référencée
+     1>apiDLPCC.cpp(1435): warning C4100: 'Galaxy' : paramètre formel non référencé
+     1>apiDLPCC.cpp(1470): warning C4100: 'Galaxy' : paramètre formel non référencé
+     1>apiDLPCC.cpp(1553): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(1608): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(1725): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(1730): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : voir la déclaration de 'fopen'
+     1>apiDLPCC.cpp(1709): warning C4189: 'i' : variable locale initialisée mais non référencée
+     1>apiDLPCC.cpp(1709): warning C4189: 'j' : variable locale initialisée mais non référencée
+     1>apiDLPCC.cpp(1848): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(1845): warning C4101: 'sztmp' : variable locale non référencée
+     1>apiDLPCC.cpp(1922): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(1925): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : voir la déclaration de 'fopen'
+     1>apiDLPCC.cpp(1937): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(1942): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(1944): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(1949): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(1951): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(1976): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(1978): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : voir la déclaration de 'fopen'
+     1>apiDLPCC.cpp(1997): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2022): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2036): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2043): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2049): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(2054): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2056): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(2061): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2063): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(1964): warning C4101: 'szline' : variable locale non référencée
+     1>apiDLPCC.cpp(1966): warning C4101: 'pos' : variable locale non référencée
+     1>apiDLPCC.cpp(2077): warning C4996: '_fcvt': This function or variable may be unsafe. Consider using _fcvt_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdlib.h(753) : voir la déclaration de '_fcvt'
+     1>apiDLPCC.cpp(2102): warning C4996: '_open': This function or variable may be unsafe. Consider using _sopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\io.h(243) : voir la déclaration de '_open'
+     1>apiDLPCC.cpp(2143): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : voir la déclaration de 'fopen'
+     1>apiDLPCC.cpp(2156): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\time.inl(112) : voir la déclaration de 'localtime'
+     1>apiDLPCC.cpp(2157): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2194): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(2212): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2213): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2214): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2215): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2216): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2217): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(2218): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(2219): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(2220): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(2221): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(2307): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(2310): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(2311): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2316): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : voir la déclaration de 'fopen'
+     1>apiDLPCC.cpp(2319): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : voir la déclaration de 'fopen'
+     1>apiDLPCC.cpp(2328): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(110) : voir la déclaration de 'strcpy'
+     1>apiDLPCC.cpp(2329): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(311) : voir la déclaration de 'sscanf'
+     1>apiDLPCC.cpp(2330): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2347): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(2383): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(2384): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(2389): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : voir la déclaration de 'fopen'
+     1>apiDLPCC.cpp(2397): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(110) : voir la déclaration de 'strcpy'
+     1>apiDLPCC.cpp(2398): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(311) : voir la déclaration de 'sscanf'
+     1>apiDLPCC.cpp(2425): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(2430): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : voir la déclaration de 'fopen'
+     1>apiDLPCC.cpp(2463): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(2468): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : voir la déclaration de 'fopen'
+     1>apiDLPCC.cpp(2499): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(2504): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : voir la déclaration de 'fopen'
+     1>apiDLPCC.cpp(2535): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(2540): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : voir la déclaration de 'fopen'
+     1>apiDLPCC.cpp(2571): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(2576): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : voir la déclaration de 'fopen'
+     1>apiDLPCC.cpp(2608): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(2613): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : voir la déclaration de 'fopen'
+     1>apiDLPCC.cpp(2655): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(110) : voir la déclaration de 'strcpy'
+     1>apiDLPCC.cpp(2658): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2668): warning C4127: l'expression conditionnelle est une constante
+     1>apiDLPCC.cpp(2673): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2679): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(311) : voir la déclaration de 'sscanf'
+     1>apiDLPCC.cpp(2681): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2746): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2786): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(2793): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(2796): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(2799): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(2802): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(182) : voir la déclaration de 'strncat'
+     1>apiDLPCC.cpp(2845): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(110) : voir la déclaration de 'strcpy'
+     1>apiDLPCC.cpp(2848): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2859): warning C4127: l'expression conditionnelle est une constante
+     1>apiDLPCC.cpp(2864): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2871): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(311) : voir la déclaration de 'sscanf'
+     1>apiDLPCC.cpp(2873): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2914): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(2919): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : voir la déclaration de 'fopen'
+     1>apiDLPCC.cpp(2928): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\time.inl(112) : voir la déclaration de 'localtime'
+     1>apiDLPCC.cpp(2929): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(3052): warning C4389: '!=' : incompatibilité signed/unsigned
+     1>apiDLPCC.cpp(3063): warning C4127: l'expression conditionnelle est une constante
+     1>apiDLPCC.cpp(3092): warning C4100: 'flag' : paramètre formel non référencé
+     1>apiDLPCC.cpp(3092): warning C4100: 'dwTimeout' : paramètre formel non référencé
+     1>apiDLPCC.cpp(3177): warning C4127: l'expression conditionnelle est une constante
+     1>apiDLPCC.cpp(3242): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(3282): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(3295): warning C4244: 'argument' : conversion de 'int' en 'u_short', perte possible de données
+     1>apiDLPCC.cpp(3224): warning C4101: 'szhostName' : variable locale non référencée
+     1>apiDLPCC.cpp(3229): warning C4101: 'buff' : variable locale non référencée
+     1>apiDLPCC.cpp(3221): warning C4101: 'line' : variable locale non référencée
+     1>apiDLPCC.cpp(3219): warning C4101: 'fp' : variable locale non référencée
+     1>apiDLPCC.cpp(3220): warning C4101: 'fp1' : variable locale non référencée
+     1>apiDLPCC.cpp(3228): warning C4101: 'lpszRemoteAddress' : variable locale non référencée
+     1>apiDLPCC.cpp(3226): warning C4101: 'hostPort' : variable locale non référencée
+     1>apiDLPCC.cpp(3225): warning C4101: 'Port' : variable locale non référencée
+     1>apiDLPCC.cpp(3217): warning C4101: 'recv_init' : variable locale non référencée
+     1>apiDLPCC.cpp(3223): warning C4101: 'hostName' : variable locale non référencée
+     1>apiDLPCC.cpp(3231): warning C4189: 'fFinished' : variable locale initialisée mais non référencée
+     1>apiDLPCC.cpp(3394): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(115) : voir la déclaration de 'strcat'
+     1>apiDLPCC.cpp(3381): warning C4100: 'flag' : paramètre formel non référencé
+     1>apiDLPCC.cpp(3428): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(3433): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : voir la déclaration de 'fopen'
+     1>apiDLPCC.cpp(3441): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(110) : voir la déclaration de 'strcpy'
+     1>apiDLPCC.cpp(3442): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(311) : voir la déclaration de 'sscanf'
+     1>apiDLPCC.cpp(3481): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\time.inl(112) : voir la déclaration de 'localtime'
+     1>apiDLPCC.cpp(3482): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(3495): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\time.inl(112) : voir la déclaration de 'localtime'
+     1>apiDLPCC.cpp(3496): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(3511): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(3527): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>apiDLPCC.cpp(3532): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(218) : voir la déclaration de 'fopen'
+     1>apiDLPCC.cpp(3547): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(3592): warning C4244: 'argument' : conversion de 'int' en 'u_short', perte possible de données
+     1>apiDLPCC.cpp(3599): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(3610): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(3629): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(3642): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : voir la déclaration de 'sprintf'
+     1>apiDLPCC.cpp(3506): warning C4101: 'HCtosend' : variable locale non référencée
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(1730): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2389): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2316): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2319): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2430): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2468): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2504): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2540): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2576): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2613): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(3433): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2650): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(248): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2919): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2143): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2840): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(3532): warning C4706: assignation au sein d'une expression conditionnelle
+     1>c:\users\nmiel\documents\developpement\dlpcc_vs12\dlpcc\apidlpcc.cpp(2238): warning C4700: variable locale 's' non initialisée utilisée
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /OUT:".\Release\DLPCC.dll" /INCREMENTAL:NO /NOLOGO odbc32.lib odbccp32.lib wsock32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\Release/STM95DLL.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Release/STM95DLL.lib" /MACHINE:X86 /SAFESEH /DLL .\Release/apiDLPCC.obj
+         .\Release/apiOn2.obj
+         .\Release/DLPCCDLL.obj
+         dlpc3dll.lib
+         STM95DLL.lib
+            Création de la bibliothèque .\Release/STM95DLL.lib et de l'objet .\Release/STM95DLL.exp
+         STM95DLL.vcxproj -> C:\Users\nmiel\Documents\Developpement\DLPCC_vs12\DlpCc\.\Release\DLPCC.dll
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\bscmake.exe /nologo /o".\Release/STM95DLL.bsc" .\Release\apiDLPCC.sbr .\Release\apiOn2.sbr .\Release\DLPCCDLL.sbr
+     1>Génération du projet "C:\Users\nmiel\Documents\Developpement\DLPCC_vs12\DlpCc\STM95DLL.vcxproj" terminée (Build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:04.77

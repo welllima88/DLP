@@ -1,0 +1,321 @@
+//*****
+//* STM - Station de Travail Monétique
+//* API ON2 - Communication avec le serveur monétique ON/2 sur le S/88
+//* Couche bas niveau: communication sockets TCP/IP
+//* Portage DLL Windows 95 - Patrice BURIEZ (PBu) - Février 1998
+//*****
+//* Sock.cpp
+//*****
+
+#include "STM95DLLpriv.h"
+#include "Sock.h"
+
+/////////////////////////////////////////////////////////////////////////////
+// Classe CSock
+//   Note: Les timeouts sont exprimés en millisecondes
+
+int CSock::m_nInstances =	0;
+BOOL CSock::m_bStartedUp =	FALSE;
+
+// Construction/Destruction
+CSock::CSock()
+	: m_hSocket(INVALID_SOCKET)
+{
+	// Compter le nombre d'instances de la classe
+	m_nInstances++;
+}
+
+CSock::~CSock()
+{
+	// Libérer la DLL WinSock à la destruction de la dernière instance
+	Close();
+	if ((--m_nInstances == 0) && m_bStartedUp)
+	{
+		Cleanup();
+	}
+}
+
+// Operations
+BOOL CSock::Open(LPCSTR lpszRemoteAddress, WORD wRemotePort)
+{
+	// Initialiser la DLL WinSock lors de la première ouverture d'un socket
+	if (!m_bStartedUp)
+	{
+		Startup();
+		if (!m_bStartedUp)
+		{
+			return FALSE;
+		}
+	}
+
+	// Vérifier les paramètres
+	if (lpszRemoteAddress == NULL)
+	{
+		return FALSE;
+	}
+
+	// Le socket ne doit pas être déjà ouvert
+	if (m_hSocket != INVALID_SOCKET)
+	{
+		return FALSE;
+	}
+
+	// Construire l'adresse de la machine distante
+	SOCKADDR_IN addrRemote;
+	::memset(&addrRemote, 0, sizeof(addrRemote));
+	addrRemote.sin_family = AF_INET;
+	addrRemote.sin_port = ::htons(wRemotePort);
+	if ((addrRemote.sin_addr.s_addr = ::inet_addr(lpszRemoteAddress)) == INADDR_NONE)
+	{
+		return FALSE;
+	}
+
+	// Ouvrir le socket
+	if ((m_hSocket = ::socket(PF_INET, SOCK_STREAM, 0)) == INVALID_SOCKET)
+	{
+#ifdef _DEBUG
+		//int iError = ::WSAGetLastError();
+#endif
+		return FALSE;
+	}
+
+	// Connecter le socket à la machine distante
+	if (::connect(m_hSocket, (LPSOCKADDR)&addrRemote, sizeof(addrRemote)) != 0)
+	{
+#ifdef _DEBUG
+		//int iError = ::WSAGetLastError();
+#endif
+		::closesocket(m_hSocket);
+		m_hSocket = INVALID_SOCKET;
+		return FALSE;
+	}
+
+	// Passer le socket en mode non-bloquant
+	DWORD dwNonBlockingMode = 1;
+	if (::ioctlsocket(m_hSocket, FIONBIO, &dwNonBlockingMode) != 0)
+	{
+#ifdef _DEBUG
+		//int iError = ::WSAGetLastError();
+#endif
+		::closesocket(m_hSocket);
+		m_hSocket = INVALID_SOCKET;
+		return FALSE;
+	}
+
+	// Ouverture du socket terminée
+	return TRUE;
+}
+
+BOOL CSock::Close()
+{
+	// Le socket doit être ouvert
+	if (m_hSocket == INVALID_SOCKET)
+	{
+		return FALSE;
+	}
+
+	// Fermer le socket
+	if (::closesocket(m_hSocket) != 0)
+	{
+#ifdef _DEBUG
+		//int iError = ::WSAGetLastError();
+#endif
+		return FALSE;
+	}
+
+	// Fermeture du socket terminée
+	m_hSocket = INVALID_SOCKET;
+	return TRUE;
+}
+
+BOOL CSock::Abort()
+{
+	// Le socket doit être ouvert
+	if (m_hSocket == INVALID_SOCKET)
+	{
+		return FALSE;
+	}
+
+	// Demander la fermeture brutale de la connexion
+	LINGER lingerAbort;
+	lingerAbort.l_onoff = 1;
+	lingerAbort.l_linger = 0;
+	if (::setsockopt(	m_hSocket,
+						SOL_SOCKET,
+						SO_LINGER,
+						(LPCSTR)&lingerAbort,
+						sizeof(lingerAbort) ) != 0)
+	{
+#ifdef _DEBUG
+		//int iError = ::WSAGetLastError();
+#endif
+		return FALSE;
+	}
+
+	// Fermer le socket
+	if (::closesocket(m_hSocket) != 0)
+	{
+#ifdef _DEBUG
+		//int iError = ::WSAGetLastError();
+#endif
+		return FALSE;
+	}
+
+	// Fermeture brutale du socket terminée
+	m_hSocket = INVALID_SOCKET;
+	return TRUE;
+}
+
+BOOL CSock::Send(LPCSTR lpData, DWORD dwLenData)
+{
+	// Vérifier les paramètres
+	if (lpData == NULL)
+	{
+		return FALSE;
+	}
+	
+	// Le socket doit être ouvert
+	if (m_hSocket == INVALID_SOCKET)
+	{
+		return FALSE;
+	}
+
+	// Emettre en plusieurs passes si il y a trop de données
+	while (dwLenData != 0)
+	{
+		// Emettre la portion courante
+		int iLenWritten = ::send(m_hSocket, lpData, dwLenData, 0);
+		if(iLenWritten != dwLenData)
+		//if (iLenWritten == SOCKET_ERROR)
+		{
+			
+			// Peut-on continuer ?
+			if (::WSAGetLastError() != WSAEWOULDBLOCK)
+			{
+#ifdef _DEBUG
+				//int iError = ::WSAGetLastError();
+#endif
+				return FALSE;
+			}
+
+			// Attendre que l'émission soit de nouveau possible
+			fd_set fdsWrite;
+			FD_ZERO(&fdsWrite);
+			FD_SET(m_hSocket, &fdsWrite);
+			timeval tvTimeout;
+			tvTimeout.tv_sec  = 1;
+			tvTimeout.tv_usec = 0;
+			if (::select(0, NULL, &fdsWrite, NULL, &tvTimeout) != 1)
+			{
+#ifdef _DEBUG
+				//int iError = ::WSAGetLastError();
+#endif
+				return FALSE;
+			}
+			continue;
+		}
+
+		// Passer à la portion suivante
+		lpData += iLenWritten;
+		dwLenData -= iLenWritten;
+	}
+
+	// Emission des données terminée
+	return TRUE;
+}
+
+BOOL CSock::Receive(DWORD dwTimeout, LPSTR lpData, DWORD dwLenData)
+{
+	// Vérifier les paramètres
+	if (lpData == NULL)
+	{
+		return FALSE;
+	}
+
+	// Le socket doit être ouvert
+	if (m_hSocket == INVALID_SOCKET)
+	{
+		return FALSE;
+	}
+
+	// Lire les données en plusieurs passes si elles ne sont pas immédiatement disponibles
+	while (dwLenData != 0)
+	{
+		// Lire la portion courante
+		int iLenRead = ::recv(m_hSocket, lpData, dwLenData, 0);
+		if (iLenRead == 0)
+		{
+			// La connection a été terminée (proprement) par la machine distante !
+			return FALSE;
+		}
+		if (iLenRead == SOCKET_ERROR)
+		{
+			// Peut-on continuer ?
+			if (::WSAGetLastError() != WSAEWOULDBLOCK)
+			{
+#ifdef _DEBUG
+				//int iError = ::WSAGetLastError();
+#endif
+				return FALSE;
+			}
+
+			// Attendre que des données soient de nouveau disponibles
+			fd_set fdsRead;
+			FD_ZERO(&fdsRead);
+			FD_SET(m_hSocket, &fdsRead);
+			timeval tvTimeout;
+			tvTimeout.tv_sec  = dwTimeout / 1000;
+			tvTimeout.tv_usec = (dwTimeout % 1000) * 1000;
+			if (::select(0, &fdsRead, NULL, NULL, &tvTimeout) != 1)
+			{
+#ifdef _DEBUG
+				//int iError = ::WSAGetLastError();
+#endif
+				return FALSE;
+			}
+			continue;
+		}
+
+		// Passer à la portion suivante
+		lpData += iLenRead;
+		dwLenData -= iLenRead;
+	}
+
+	// Lecture des données terminée
+	return TRUE;
+}
+
+// Implementation
+void CSock::Startup()
+{
+	// Initialiser la DLL WinSock
+	if (!m_bStartedUp)
+	{
+		WORD wVersionRequested = MAKEWORD(1,1);
+		WSADATA wsaData;
+		if (::WSAStartup(wVersionRequested, &wsaData) == 0)
+		{
+			// Vérifier la version supportée par la DLL WinSock
+			if (wsaData.wVersion == wVersionRequested)
+			{
+				m_bStartedUp = TRUE;
+			}
+			else
+			{
+				::WSACleanup();
+			}
+		}
+	}
+}
+
+void CSock::Cleanup()
+{
+	// Libérer la DLL WinSock
+	if (m_bStartedUp)
+	{
+		if (::WSACleanup() == 0)
+		{
+			m_bStartedUp = FALSE;
+		}
+	}
+}

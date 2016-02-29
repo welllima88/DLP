@@ -1,0 +1,18 @@
+
+LIBRARY DLPCC
+
+DESCRIPTION "DLPCC (Interface Galaxy - C3) - apiDLP"
+
+
+EXPORTS
+	Dlp_His				@1
+	Dlp_Stm				@2
+	GetDate				@3
+	DlpCc_in			@4
+	Dlp_Cc				@5
+	Test				@6
+	Protocole_Resa		@7
+
+
+SECTIONS
+     .SHRSEC READ WRITE SHARED

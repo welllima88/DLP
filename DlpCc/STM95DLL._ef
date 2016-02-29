@@ -1,0 +1,27 @@
+//*****
+//* DlpCc - Interface Galaxy - C3
+//* Initialisation et terminaison de DLPCCDLL.DLL
+//* SJU - 26 avril 2001
+//*****
+
+LIBRARY DLPCCDLL
+
+DESCRIPTION "DLPCC (Interface Galasy - C3) - apiDLP"
+
+EXPORTS
+; apiDLP
+	STM_GetDateTime	@ 1000
+; apiTPE
+;	TPE_Reset		@ 1100
+;	TPE_Close		@ 1101;
+;	TPE_GetStatus	@ 1102
+;	TPE_ReadCard	@ 1103
+;	TPE_WriteCard	@ 1104
+;	TPE_LockCard	@ 1105
+; apiON2
+;	ON2_Open		@ 1200
+;	ON2_Close		@ 1201
+;	ON2_Abort		@ 1202
+;	ON2_SendPayment	@ 1203
+;	ON2_SendCommit	@ 1204
+;	ON2_SendRefund	@ 1205
