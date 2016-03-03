@@ -833,27 +833,25 @@ If SessionID = "NP" Then
     Ret = MsgBox("Impossible de créer le Smart Media - Flag No Post actif", _
                 vbInformation + vbOKOnly, "CallSmed - v1.0")
     Exit Sub
-End If
 
-If SessionID = "NC" Then
+
+ElseIf SessionID = "NC" Then
     If VaLigneColonne(22, 43, 100, True) = True Then
         Session.TransmitANSI ("  ")
    End If
     Ret = MsgBox("Impossible de créer le Smart Media - CrCode M", _
                 vbInformation + vbOKOnly, "CallSmed - v1.0")
     Exit Sub
-End If
 
-If SessionID = "NB" Then
+ElseIf SessionID = "NB" Then
     If VaLigneColonne(22, 43, 100, True) = True Then
         Session.TransmitANSI ("  ")
    End If
     Ret = MsgBox("Impossible de créer le Smart Media", _
                 vbInformation + vbOKOnly, "CallSmed - v1.0")
     Exit Sub
-End If
 
-If SessionID = "NA" Then
+ElseIf SessionID = "NA" Then
    If VaLigneColonne(22, 43, 100, True) = True Then
         Session.TransmitANSI ("  ")
    End If
@@ -861,9 +859,8 @@ If SessionID = "NA" Then
    Ret = MsgBox("Vous n'êtes pas autorisés à recréer un Smart Media", _
                 vbInformation + vbOKOnly, "CallSmed - v1.0")
   Exit Sub
-End If
 
-If SessionID = "ER" Then
+ElseIf SessionID = "ER" Then
    If VaLigneColonne(22, 43, 100, True) = True Then
         Session.TransmitANSI ("  ")
    End If
@@ -871,10 +868,12 @@ If SessionID = "ER" Then
    Ret = MsgBox("Probleme avec le champ SmartMedia", _
                 vbInformation + vbOKOnly, "CallSmed - v1.0")
   Exit Sub
-End If
 
-If SessionID = "OK" Then
-
+ElseIf SessionID = "OK" Then
+    
+    If VaLigneColonne(22, 43, 100, True) = True Then
+          Session.TransmitANSI ("  ")
+    End If
 
     If Not InitParam Then ' Appel de la fonction InitParam
       If VaLigneColonne(22, 43, 100, True) = True Then
@@ -963,9 +962,7 @@ If SessionID = "OK" Then
        Exit Sub
     End If
     
-    If VaLigneColonne(22, 43, 100, True) = True Then
-          Session.TransmitANSI ("  ")
-    End If
+
     ChDir SaveCurDir
     
     OrdreZ = True
@@ -1155,6 +1152,8 @@ errChoixTrtSmed:
 Ret = MsgBox("Erreur " & Err.Number & " - " & Err.Description, vbCritical + vbOKOnly, _
               "ChoixTrtSmed")
 End Sub
+
+
 
 
 
