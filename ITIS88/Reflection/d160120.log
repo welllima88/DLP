@@ -1,0 +1,963 @@
+20/01/2016 10:50:34.189 INFO [C3Driver::handle] [Th-290400] Message In[384]
+[0000] 20 20 20 20 20 20 20 20 : 20 20 20 20 39 37 38 20  [........ ....978.]
+[0010] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 7A 2B  [........ ......z+]
+[0020] 70 30 20 20 20 20 20 20 : 20 20 20 20 30 30 31 32  [p0...... ....0012]
+[0030] 34 35 36 32 20 20 20 20 : 2A 2A 2A 2A 2A 2A 2A 2A  [4562.... ********]
+[0040] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 20 20  [******** ******..]
+[0050] 20 20 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 2A 2A  [..****** ********]
+[0060] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 2A 2A  [******** ********]
+[0070] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 20 20  [******** ******..]
+[0080] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0090] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00a0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00b0] 20 20 20 20 20 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[00c0] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[00d0] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[00e0] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[00f0] 00 00 00 00 00 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0100] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0110] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0120] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0130] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0140] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0150] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0160] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0170] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+20/01/2016 10:50:34.283 DEBUG [PinpadService::write] [Th-290400] length=7
+[0000] 01 30 36 10 03 A2 CF                               [.06....          ]
+20/01/2016 10:50:34.283 LEVEL[7] [Enter getKey] [Th-290400] Start
+20/01/2016 10:50:34.283 LEVEL[6] [Return getKey] [Th-290400] ret=0x00
+20/01/2016 10:50:34.408 DEBUG [PinpadService::read first] [Th-290400] received=86 rv=0
+[0000] 01 30 36 30 30 30 31 30 : 33 9A 57 38 32 30 38 30  [.0600010 3.W82080]
+[0010] 35 FC 49 30 31 39 33 30 : 35 13 65 35 35 30 38 30  [5.I01930 5.e55080]
+[0020] 31 18 1D 30 32 39 33 30 : 33 9E B6 30 31 39 35 30  [1..02930 3..01950]
+[0030] 31 86 3F 31 31 31 33 30 : 31 98 22 24 24 24 24 31  [1.?11130 1."$$$$1]
+[0040] 35 00 00 31 33 31 36 33 : 50 50 38 30 31 32 36 33  [5..13163 PP801263]
+[0050] 30 33 10 03 CC 6F                                  [03...o           ]
+20/01/2016 10:50:34.408 LEVEL[6] [pos_display] [Th-290400] msg='Numéro Terminal Invalide <>      ' length=33 confirm=0x00
+20/01/2016 10:50:34.408 LEVEL[6] [Return pos_display] [Th-290400] msg='Numéro Terminal Invalide <>      ' length=33 confirm=0x00
+20/01/2016 10:50:34.408 INFO [C3Driver::handle] [Th-290400] Message Out[512]
+[0000] 30 30 30 30 30 30 30 30 : 30 30 30 30 39 37 38 20  [00000000 0000978.]
+[0010] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0020] 20 20 30 31 32 38 30 2A : 2A 2A 2A 2A 2A 2A 2A 2A  [..01280* ********]
+[0030] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 20 20 20 20 20 20  [******** **......]
+[0040] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 2A 2A 2A  [........ .....***]
+[0050] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 2A 2A  [******** ********]
+[0060] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 2A 2A  [******** ********]
+[0070] 2A 2A 2A 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [***..... ........]
+[0080] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0090] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 2A 2A  [........ ......**]
+[00a0] 2A 2A 2A 2A 2A 20 2B 70 : 20 20 20 20 20 20 20 20  [*****.+p ........]
+[00b0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00c0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00d0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00e0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00f0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0100] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0110] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0120] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0130] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0140] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0150] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0160] 20 20 20 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[0170] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[0180] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[0190] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[01a0] 00 00 00 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[01b0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[01c0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[01d0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[01e0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[01f0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+20/01/2016 14:59:12.533 INFO [C3Driver::handle] [Th-332312] Message In[384]
+[0000] 20 20 20 20 20 20 20 20 : 20 20 20 20 39 37 38 20  [........ ....978.]
+[0010] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 7A 2B  [........ ......z+]
+[0020] 70 31 20 20 30 33 39 35 : 31 30 30 31 30 30 31 32  [p1..0395 10010012]
+[0030] 34 35 36 32 20 20 20 20 : 2A 2A 2A 2A 2A 2A 2A 2A  [4562.... ********]
+[0040] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 20 20  [******** ******..]
+[0050] 20 20 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 2A 2A  [..****** ********]
+[0060] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 2A 2A  [******** ********]
+[0070] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 20 20  [******** ******..]
+[0080] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0090] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00a0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00b0] 20 20 20 20 20 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[00c0] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[00d0] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[00e0] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[00f0] 00 00 00 00 00 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0100] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0110] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0120] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0130] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0140] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0150] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0160] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0170] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+20/01/2016 14:59:12.611 DEBUG [PinpadService::write] [Th-332312] length=7
+[0000] 01 30 36 10 03 A2 CF                               [.06....          ]
+20/01/2016 14:59:12.611 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:12.611 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:12.721 DEBUG [PinpadService::read first] [Th-332312] received=86 rv=0
+[0000] 01 30 36 30 30 30 31 30 : 33 9A 57 38 32 30 38 30  [.0600010 3.W82080]
+[0010] 35 FC 49 30 31 39 33 30 : 35 13 65 35 35 30 38 30  [5.I01930 5.e55080]
+[0020] 31 18 1D 30 32 39 33 30 : 33 9E B6 30 31 39 35 30  [1..02930 3..01950]
+[0030] 31 86 3F 31 31 31 33 30 : 31 98 22 24 24 24 24 31  [1.?11130 1."$$$$1]
+[0040] 35 00 00 31 33 31 36 33 : 50 50 38 30 31 32 36 33  [5..13163 PP801263]
+[0050] 30 33 10 03 CC 6F                                  [03...o           ]
+20/01/2016 14:59:12.721 DEBUG [PinpadService::write] [Th-332312] length=81
+[0000] 01 30 32 83 C4 99 90 01 : E6 92 30 30 30 30 30 30  [.02..... ..000000]
+[0010] 30 30 23 5A 39 37 38 31 :                          [00#Z9781         ]
+20/01/2016 14:59:12.736 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:12.736 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:13.314 DEBUG [PinpadService::read first] [Th-332312] received=45 rv=0
+[0000] 01 30 33 20 20 20                                  [.03...           ]
+20/01/2016 14:59:13.314 INFO [C3Driver::tpvFunction3] [Th-332312] message='   DISNEY_FID       NON INITIALISEE     ' input='2' timeout=255
+20/01/2016 14:59:13.314 LEVEL[6] [pos_display] [Th-332312] msg='   DISNEY_FID       NON INITIALISEE<>   ' length=40 confirm=0x00
+20/01/2016 14:59:13.314 LEVEL[6] [Return pos_display] [Th-332312] msg='   DISNEY_FID       NON INITIALISEE<>   ' length=40 confirm=0x00
+20/01/2016 14:59:13.314 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:13.314 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:13.377 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:13.377 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:13.424 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:13.424 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:13.471 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:13.471 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:13.533 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:13.533 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:13.580 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:13.580 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:13.627 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:13.642 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:13.689 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:13.689 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:13.736 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:13.736 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:13.799 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:13.799 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:13.846 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:13.846 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:13.892 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:13.892 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:13.955 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:13.955 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.002 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.002 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.049 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.064 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.111 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.111 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.158 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.158 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.221 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.221 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.267 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.267 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.314 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.314 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.377 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.377 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.424 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.424 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.471 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.486 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.533 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.533 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.580 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.580 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.642 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.642 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.689 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.689 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.736 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.736 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.799 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.799 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.846 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.846 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.892 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.908 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:14.955 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:14.955 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.002 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.002 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.064 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.064 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.111 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.111 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.158 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.158 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.221 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.221 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.267 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.267 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.314 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.330 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.377 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.377 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.424 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.424 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.486 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.486 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.533 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.533 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.580 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.580 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.642 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.642 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.689 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.689 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.736 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.752 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.799 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.799 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.846 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.846 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.908 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.908 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:15.955 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:15.955 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.002 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.002 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.064 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.064 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.111 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.111 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.158 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.174 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.221 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.221 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.267 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.267 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.330 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.330 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.377 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.377 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.424 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.424 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.486 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.486 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.533 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.533 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.580 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.596 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.642 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.642 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.689 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.689 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.752 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.752 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.799 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.799 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.846 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.846 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.908 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.908 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:16.955 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:16.955 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.002 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.017 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.064 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.064 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.111 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.111 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.174 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.174 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.221 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.221 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.267 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.267 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.330 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.330 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.377 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.377 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.424 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.439 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.486 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.486 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.533 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.533 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.596 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.596 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.642 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.642 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.689 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.689 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.752 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.752 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.799 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.799 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.846 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.861 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.908 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.908 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:17.955 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:17.955 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.017 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.017 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.064 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.064 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.111 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.111 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.174 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.174 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.221 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.221 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.267 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.283 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.330 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.330 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.377 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.377 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.439 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.439 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.486 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.486 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.533 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.533 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.596 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.596 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.642 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.642 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.689 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.705 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.752 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.752 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.799 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.799 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.861 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.861 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.908 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.908 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:18.955 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:18.955 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.017 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.017 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.064 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.064 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.111 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.127 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.174 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.174 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.221 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.221 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.283 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.283 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.330 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.330 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.377 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.377 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.439 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.439 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.486 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.486 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.533 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.549 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.596 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.596 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.642 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.642 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.705 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.705 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.752 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.752 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.799 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.799 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.861 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.861 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.908 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.908 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:19.955 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:19.971 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.017 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.017 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.064 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.064 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.127 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.127 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.174 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.174 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.221 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.221 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.283 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.283 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.330 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.330 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.377 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.392 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.439 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.439 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.486 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.486 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.549 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.549 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.596 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.596 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.642 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.642 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.705 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.705 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.752 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.752 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.799 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.814 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.861 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.861 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.908 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.908 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:20.971 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:20.971 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.017 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.017 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.064 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.064 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.127 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.127 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.174 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.174 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.221 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.236 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.283 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.283 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.330 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.330 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.392 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.392 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.439 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.439 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.486 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.486 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.549 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.549 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.596 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.596 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.642 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.658 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.705 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.705 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.752 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.752 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.814 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.814 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.861 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.861 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.908 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.908 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:21.971 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:21.971 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.017 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.017 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.064 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.080 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.127 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.127 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.174 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.174 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.236 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.236 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.283 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.283 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.330 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.330 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.392 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.392 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.439 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.439 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.486 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.502 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.549 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.549 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.596 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.596 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.658 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.658 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.705 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.705 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.752 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.752 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.814 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.814 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.861 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.861 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.908 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.924 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:22.971 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:22.971 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.017 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.017 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.080 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.080 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.127 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.127 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.174 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.174 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.236 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.236 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.283 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.283 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.330 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.346 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.392 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.392 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.439 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.439 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.502 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.502 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.549 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.549 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.596 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.596 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.658 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.658 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.705 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.705 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.752 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.767 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.814 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.814 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.861 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.861 LEVEL[6] [Return getKey] [Th-332312] ret=0x0D
+20/01/2016 14:59:23.861 INFO [C3Driver::tpvFunction3] [Th-332312] cr='0' TypeVal='f1'
+20/01/2016 14:59:23.861 DEBUG [PinpadService::write] [Th-332312] length=9
+[0000] 01 30 33 30 F1 10 03 12 : C6                       [.030.... .       ]
+20/01/2016 14:59:23.861 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 14:59:23.861 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 14:59:23.861 DEBUG [PinpadService::read first] [Th-332312] received=84 rv=0
+[0000] 01 30 32 83 C4 99 90 01 : E6 92 33 30 30 30 30 30  [.02..... ..300000]
+[0010] 30 30 30 23 5A 30 30 30 : 30 30                    [000#Z000 00      ]
+20/01/2016 14:59:23.861 INFO [C3Driver::handle] [Th-332312] Message Out[512]
+[0000] 30 30 30 30 30 30 30 30 : 30 30 30 30 39 37 38 20  [00000000 0000978.]
+[0010] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 30 30  [........ ......00]
+[0020] 31 38 30 33 31 31 30 2A : 2A 2A 2A 2A 2A 2A 2A 2A  [1803110* ********]
+[0030] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 20 20 20 20 20 20  [******** **......]
+[0040] 20 20 20 20 30 33 39 35 : 31 30 30 31 20 2A 2A 2A  [....0395 1001.***]
+[0050] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 2A 2A  [******** ********]
+[0060] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 2A 2A  [******** ********]
+[0070] 2A 2A 2A 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [***..... ........]
+[0080] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0090] 20 20 20 20 20 20 2B 20 : 20 20 20 20 20 20 2A 2A  [......+. ......**]
+[00a0] 2A 2A 2A 2A 2A 20 2B 70 : 20 20 20 20 20 20 20 20  [*****.+p ........]
+[00b0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00c0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00d0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00e0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00f0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0100] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0110] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0120] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0130] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0140] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0150] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0160] 20 20 20 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[0170] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[0180] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[0190] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[01a0] 00 00 00 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[01b0] 30 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [0....... ........]
+[01c0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[01d0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[01e0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[01f0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+20/01/2016 15:07:10.674 INFO [C3Driver::handle] [Th-332312] Message In[384]
+[0000] 20 20 20 20 20 20 20 20 : 20 20 20 20 39 37 38 20  [........ ....978.]
+[0010] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 7A 2B  [........ ......z+]
+[0020] 70 31 20 20 30 33 39 35 : 31 30 30 31 30 30 31 32  [p1..0395 10010012]
+[0030] 34 35 36 32 20 20 20 20 : 2A 2A 2A 2A 2A 2A 2A 2A  [4562.... ********]
+[0040] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 20 20  [******** ******..]
+[0050] 20 20 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 2A 2A  [..****** ********]
+[0060] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 2A 2A  [******** ********]
+[0070] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 20 20  [******** ******..]
+[0080] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0090] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00a0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00b0] 20 20 20 20 20 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[00c0] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[00d0] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[00e0] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[00f0] 00 00 00 00 00 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0100] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0110] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0120] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0130] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0140] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0150] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0160] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0170] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+20/01/2016 15:07:10.752 DEBUG [PinpadService::write] [Th-332312] length=7
+[0000] 01 30 36 10 03 A2 CF                               [.06....          ]
+20/01/2016 15:07:10.752 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:10.752 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:10.877 DEBUG [PinpadService::read first] [Th-332312] received=86 rv=0
+[0000] 01 30 36 30 30 30 31 30 : 33 9A 57 38 32 30 38 30  [.0600010 3.W82080]
+[0010] 35 FC 49 30 31 39 33 30 : 35 13 65 35 35 30 38 30  [5.I01930 5.e55080]
+[0020] 31 18 1D 30 32 39 33 30 : 33 9E B6 30 31 39 35 30  [1..02930 3..01950]
+[0030] 31 86 3F 31 31 31 33 30 : 31 98 22 24 24 24 24 31  [1.?11130 1."$$$$1]
+[0040] 35 00 00 31 33 31 36 33 : 50 50 38 30 31 32 36 33  [5..13163 PP801263]
+[0050] 30 33 10 03 CC 6F                                  [03...o           ]
+20/01/2016 15:07:10.877 DEBUG [PinpadService::write] [Th-332312] length=81
+[0000] 01 30 32 83 C4 99 90 01 : E6 92 30 30 30 30 30 30  [.02..... ..000000]
+[0010] 30 30 23 5A 39 37 38 31 :                          [00#Z9781         ]
+20/01/2016 15:07:10.877 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:10.877 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:11.471 DEBUG [PinpadService::read first] [Th-332312] received=45 rv=0
+[0000] 01 30 33 20 20 20                                  [.03...           ]
+20/01/2016 15:07:11.471 INFO [C3Driver::tpvFunction3] [Th-332312] message='   DISNEY_FID       NON INITIALISEE     ' input='2' timeout=255
+20/01/2016 15:07:11.471 LEVEL[6] [pos_display] [Th-332312] msg='   DISNEY_FID       NON INITIALISEE<>   ' length=40 confirm=0x00
+20/01/2016 15:07:11.471 LEVEL[6] [Return pos_display] [Th-332312] msg='   DISNEY_FID       NON INITIALISEE<>   ' length=40 confirm=0x00
+20/01/2016 15:07:11.471 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:11.471 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:11.517 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:11.517 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:11.564 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:11.580 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:11.627 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:11.627 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:11.674 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:11.674 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:11.736 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:11.736 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:11.783 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:11.783 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:11.830 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:11.830 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:11.892 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:11.892 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:11.939 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:11.939 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:11.986 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.002 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.049 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.049 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.096 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.096 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.158 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.158 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.205 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.205 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.252 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.252 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.314 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.314 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.361 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.361 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.408 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.424 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.471 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.471 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.517 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.517 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.580 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.580 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.627 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.627 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.674 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.674 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.736 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.736 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.783 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.783 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.830 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.846 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.892 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.892 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:12.939 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:12.939 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.002 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.002 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.049 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.049 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.096 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.096 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.158 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.158 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.205 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.205 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.252 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.267 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.314 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.314 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.361 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.361 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.424 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.424 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.471 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.471 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.517 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.517 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.580 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.580 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.627 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.627 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.674 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.689 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.736 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.736 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.783 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.783 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.846 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.846 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.892 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.892 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:13.939 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:13.939 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.002 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.002 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.049 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.049 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.096 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.111 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.158 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.158 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.205 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.205 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.267 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.267 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.314 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.314 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.361 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.361 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.424 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.424 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.471 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.471 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.517 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.533 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.580 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.580 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.627 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.627 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.689 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.689 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.736 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.736 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.783 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.783 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.846 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.846 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.892 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.892 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:14.939 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:14.955 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.002 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.002 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.049 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.049 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.111 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.111 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.158 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.158 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.205 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.205 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.267 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.267 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.314 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.314 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.361 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.377 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.424 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.424 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.471 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.471 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.533 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.533 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.580 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.580 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.627 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.627 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.689 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.689 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.736 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.736 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.783 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.799 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.846 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.846 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.892 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.892 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:15.955 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:15.955 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.002 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.002 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.049 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.049 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.111 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.111 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.158 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.158 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.205 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.221 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.267 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.267 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.314 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.314 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.377 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.377 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.424 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.424 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.471 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.471 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.533 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.533 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.580 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.580 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.627 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.642 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.689 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.689 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.736 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.736 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.799 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.799 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.846 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.846 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.892 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.892 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:16.955 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:16.955 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.002 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.002 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.049 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.064 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.111 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.111 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.158 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.158 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.221 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.221 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.267 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.267 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.314 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.314 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.377 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.377 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.424 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.424 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.471 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.486 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.533 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.533 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.580 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.580 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.642 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.642 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.689 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.689 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.736 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.736 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.799 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.799 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.846 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.846 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.892 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.908 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:17.955 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:17.955 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.002 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.002 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.064 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.064 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.111 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.111 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.158 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.158 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.221 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.221 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.267 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.267 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.314 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.330 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.377 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.377 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.424 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.424 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.486 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.486 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.533 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.533 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.580 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.580 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.642 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.642 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.689 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.689 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.736 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.752 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.799 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.799 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.846 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.846 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.908 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.908 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:18.955 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:18.955 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:19.002 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:19.002 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:19.064 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:19.064 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:19.111 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:19.111 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:19.158 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:19.174 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:19.221 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:19.221 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:19.267 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:19.267 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:19.330 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:19.330 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:19.377 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:19.377 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:19.424 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:19.424 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:19.486 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:19.486 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:19.533 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:19.533 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:19.580 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:19.596 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:19.642 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:19.642 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:19.689 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:19.689 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:19.752 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:19.752 LEVEL[6] [Return getKey] [Th-332312] ret=0x0D
+20/01/2016 15:07:19.752 INFO [C3Driver::tpvFunction3] [Th-332312] cr='0' TypeVal='f1'
+20/01/2016 15:07:19.752 DEBUG [PinpadService::write] [Th-332312] length=9
+[0000] 01 30 33 30 F1 10 03 12 : C6                       [.030.... .       ]
+20/01/2016 15:07:19.752 LEVEL[7] [Enter getKey] [Th-332312] Start
+20/01/2016 15:07:19.752 LEVEL[6] [Return getKey] [Th-332312] ret=0x00
+20/01/2016 15:07:19.752 DEBUG [PinpadService::read first] [Th-332312] received=84 rv=0
+[0000] 01 30 32 83 C4 99 90 01 : E6 92 33 30 30 30 30 30  [.02..... ..300000]
+[0010] 30 30 30 23 5A 30 30 30 : 30 30                    [000#Z000 00      ]
+20/01/2016 15:07:19.752 INFO [C3Driver::handle] [Th-332312] Message Out[512]
+[0000] 30 30 30 30 30 30 30 30 : 30 30 30 30 39 37 38 20  [00000000 0000978.]
+[0010] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 30 30  [........ ......00]
+[0020] 31 38 30 33 31 31 30 2A : 2A 2A 2A 2A 2A 2A 2A 2A  [1803110* ********]
+[0030] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 20 20 20 20 20 20  [******** **......]
+[0040] 20 20 20 20 30 33 39 35 : 31 30 30 31 20 2A 2A 2A  [....0395 1001.***]
+[0050] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 2A 2A  [******** ********]
+[0060] 2A 2A 2A 2A 2A 2A 2A 2A : 2A 2A 2A 2A 2A 2A 2A 2A  [******** ********]
+[0070] 2A 2A 2A 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [***..... ........]
+[0080] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0090] 20 20 20 20 20 20 2B 20 : 20 20 20 20 20 20 2A 2A  [......+. ......**]
+[00a0] 2A 2A 2A 2A 2A 20 2B 70 : 20 20 20 20 20 20 20 20  [*****.+p ........]
+[00b0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00c0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00d0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00e0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[00f0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0100] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0110] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0120] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0130] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0140] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0150] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[0160] 20 20 20 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[0170] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[0180] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[0190] 00 00 00 00 00 00 00 00 : 00 00 00 00 00 00 00 00  [........ ........]
+[01a0] 00 00 00 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[01b0] 30 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [0....... ........]
+[01c0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[01d0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[01e0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
+[01f0] 20 20 20 20 20 20 20 20 : 20 20 20 20 20 20 20 20  [........ ........]
