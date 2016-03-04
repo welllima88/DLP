@@ -196,8 +196,7 @@ End If
 
 
 If OrdreZ Then
-    
-    Name CurDir & "\c3ConfigHC" As CurDir & "\c3Config"
+    FileCopy CurDir & "\c3ConfigHC", CurDir & "\c3Config"
 
     HPMS.aOperation = "z"
     HPMS.aCurrencyCode = "978"
@@ -221,13 +220,20 @@ If OrdreZ Then
     '    HPMS.aRedingMode = "1"
     'End If
     NumFolio = FindClef(LitChamp(3, 7, 7)) & GetNumHotel(Controler) & LitChamp(3, 7, 7)
+    
     HPMS.aTrnsRef = NumFolio
+    
+    If Len(NumFolio) < 10 Then
+        HPMS.aAmount = "0" & Len(NumFolio)
+    Else
+        HPMS.aAmount = Len(NumFolio)
+    End If
     
     HPMS.aRedingMode = "0"
     
     Ret = DlpHIS(HPMS, HPMR)
     
-    Name CurDir & "\c3Config" As CurDir & "\c3ConfigHC"
+    Kill (CurDir & "\c3Config")
 
     
     If Not Ret Or HPMR.bResponseCode <> 0 Then
@@ -278,8 +284,7 @@ If Not InitParam Then ' Appel de la fonction InitParam
   Exit Sub
 End If
 
-Name CurDir & "\c3ConfigCB" As CurDir & "\c3Config"
-
+FileCopy CurDir & "\c3ConfigCB", CurDir & "\c3Config"
 
 HPMS.aOperation = Operation
 HPMS.aAmount = Format$(Plafond, "000000000000")  ' Montant en centime d' Euro
@@ -320,7 +325,7 @@ Ret = DlpHIS(HPMS, HPMR)
 'Ret = MsgBox(HPMR.bPanNum, vbApplicationModal, "Trace")
 
 'Pan = Replace(HPMR.bPanNum, "?", " ") 'Formatage du Pan
-Name CurDir & "\c3Config" As CurDir & "\c3ConfigCB"
+Kill (CurDir & "\c3Config")
 If Not Ret Or HPMR.bResponseCode <> 0 Then
   EtatC3 = False
   Ret = MsgBox("Code : " & HPMR.bResponseCode & " - Carte refusée : " & HPMR.bExplanation, vbExclamation, "confirmation")
@@ -477,7 +482,7 @@ End Function
 
 
 
-Function LitChamp(Ligne As Integer, Colonne As Integer, Longueur As Integer) As String
+Function LitChamp(Ligne As Integer, Colonne As Integer, longueur As Integer) As String
 On Error GoTo ErrLitChamp
 
 Dim PanExistant As Variant
@@ -486,7 +491,7 @@ Dim Verif As Variant
   Data = ""
   LitChamp = ""
 
-  Data = Session.GetDisplayText(Ligne, Colonne, Longueur)
+  Data = Session.GetDisplayText(Ligne, Colonne, longueur)
   
   If Len(Trim$(Data)) > 0 Then
     LitChamp = Trim$(Data)
@@ -885,7 +890,9 @@ ElseIf SessionID = "OK" Then
     Nom = LitChamp(7, 14, 30)
     Prenom = Trim$(Mid$(Nom, InStr(Nom, ",") + 1, Len(Nom)))
     Nom = Trim$(Mid$(Nom, 1, InStr(Nom, ",") - 1))
+    
     NumFolio = FindClef(LitChamp(3, 7, 7)) & GetNumHotel(Controler) & LitChamp(3, 7, 7)
+    NumFolio = Format$(NumFolio, "000000000")
     
     DbtSejour = LitChamp(3, 63, 6)
     If Len(DbtSejour) = 6 Then
@@ -1010,9 +1017,10 @@ For i = 2 To 8
     szi = ""
     szi = Mid$(chaine, i - 1, 1)
     If Not IsNumeric(szi) Then
-        Ret = -1
-        Exit Function
-        
+        If szi = "" Then
+            ires = i * 0
+            total = total + ires
+        End If
     Else
         
         num = Val(szi)
@@ -1152,6 +1160,10 @@ errChoixTrtSmed:
 Ret = MsgBox("Erreur " & Err.Number & " - " & Err.Description, vbCritical + vbOKOnly, _
               "ChoixTrtSmed")
 End Sub
+
+
+
+
 
 
 
