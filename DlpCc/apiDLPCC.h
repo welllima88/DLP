@@ -142,7 +142,7 @@ DLPCCDLL_API BOOL WINAPI Dlp_Stm(lpCcPosMsgSend lpGalxSend,lpCcPosMsgRecv lpGalx
 /* Point d'entrée HIS */
 DLPCCDLL_API BOOL WINAPI Dlp_His(lpCcPosMsgSend lpGalxSend,lpCcPosMsgRecv lpGalxRecv) ;
 
-DLPCCDLL_API int WINAPI Dlp_His_Canceled_Card(char trame[], char numfolio[]) ;
+DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[], char numfolio[]) ;
 
 /* Point d'entrée Resa */
 //DLPCCDLL_API BOOL WINAPI Protocole_Revelation(lpCcRevMsgSend lpRevSend,lpCcPosMsgRecv lpGalxRecv) ;

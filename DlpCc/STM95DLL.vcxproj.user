@@ -3,11 +3,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerMergeEnvironment>false</LocalDebuggerMergeEnvironment>
-    <LocalDebuggerCommand>C:\Program Files (x86)\Reflection\R8win.exe</LocalDebuggerCommand>
-    <LocalDebuggerWorkingDirectory>C:\Users\nmiel\Documents\Reflection</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerCommand>C:\Users\nmiel\Documents\Sites\Test\Parking\SimulCaisse_v2.7.exe</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>C:\Users\nmiel\Documents\Sites\Test\Parking</LocalDebuggerWorkingDirectory>
     <LocalDebuggerDebuggerType>Auto</LocalDebuggerDebuggerType>
-    <LocalDebuggerAttach>false</LocalDebuggerAttach>
-    <LocalDebuggerCommandArguments>C:\Users\nmiel\Documents\Reflection\tmp2B6.tmp.rsf</LocalDebuggerCommandArguments>
   </PropertyGroup>
   <PropertyGroup>
     <ShowAllFiles>false</ShowAllFiles>
