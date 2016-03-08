@@ -540,7 +540,13 @@ extern "C" DLPCCDLL_API int Dlp_Cc(lpCcPosMsgSend lpGalxSend,
 
 		GetWindowText(GetParent(GetFocus()),Msg,50);
 		Ret = MessageBox(NULL, Msg,"Focus sur la fenêtre", MB_OK); 
-		*/  
+		*/ 
+
+		/*char trame[409];
+		memset(trame, 0x00, 409);
+		memcpy(trame ,"M0502039510014757337", 23);
+		memcpy(&trame[294] , "2", 1);
+		Dlp_His_Canceled_Card(trame, "267642610");*/
 
 		memset(Msg,0x00,sizeof(Msg));
 		memset(szMsg,0x20,sizeof(szMsg)); 
@@ -628,6 +634,7 @@ extern "C" DLPCCDLL_API int Dlp_Cc(lpCcPosMsgSend lpGalxSend,
 							DLP_Pos_display("Fermeture de l'application",0,0);	
 
 							Ret = PostMessage(hMonetic, WM_USER+9, 0, 0); //Fermer l'application Monétique.
+							
 						}
 						return FALSE;
 					}
@@ -957,7 +964,7 @@ extern "C" DLPCCDLL_API int Dlp_Cc(lpCcPosMsgSend lpGalxSend,
 		return FALSE;
 	}
 
-	pPos_display("Monetic Tools DLRP V9.16 proxi du 29/05/2015 ",0,0);	  
+	pPos_display("Monetic Tools DLRP V9.16A proxi du 08/03/2016 ",0,0);	  
 	CheckContext(lpGalxSend , &in, pPos_display);
 
 	switch (lpGalxSend->aOperation[0])
@@ -1042,7 +1049,6 @@ extern "C" DLPCCDLL_API int Dlp_Cc(lpCcPosMsgSend lpGalxSend,
 
 	if (bDebug) i = MessageBox(NULL, (char *) p1, "TicketCom", MB_OK);
 	if (bDebug) i = MessageBox(NULL, (char *) p2, "TicketCli", MB_OK);
-	memset (lpGalxRecv, 0x20, sizeof(lpGalxRecv) );
 
 	memset(szPan,'\0',sizeof(szPan) );
 	strncpy(szPan, out.cPan, sizeof(out.cPan) );
@@ -1144,10 +1150,12 @@ extern "C" DLPCCDLL_API int Dlp_Cc(lpCcPosMsgSend lpGalxSend,
 	}
 
 	if (bDebug) i = MessageBox(NULL, (char *) lpGalxRecv, "Retour DLL", MB_OK);
-	memset(sztmp,'\0',4);
-	memcpy (sztmp, out.cC3Error, 4);
-	if (bDebug) i = MessageBox(NULL, sztmp, "Valeur de retour", MB_OK);
-
+	
+	if (bDebug){
+		memset(sztmp,'\0',4);
+		memcpy (sztmp, out.cC3Error, 4);
+		i = MessageBox(NULL, sztmp, "Valeur de retour", MB_OK);
+	}
 	return Ret;
 
 }
@@ -1197,7 +1205,7 @@ DLPCCDLL_API BOOL WINAPI Dlp_Stm(lpCcPosMsgSend lpGalxSend,
 ////////////////////////////////////
 
 DLPCCDLL_API BOOL WINAPI Dlp_His(lpCcPosMsgSend lpGalxSend,
-								 lpStmPosMsgRecv lpGalxRecv) 
+								 lpStmPosMsgRecv HISGalxRecv) 
 
 {
 	//char * CcCustTicket = NULL;
@@ -1205,32 +1213,33 @@ DLPCCDLL_API BOOL WINAPI Dlp_His(lpCcPosMsgSend lpGalxSend,
 	CcPosMsgRecv  szCcPosMsgRecv;
 
 
+	
 	//int Ret = MessageBox(NULL, "DlpHIS", "Vers C3", MB_OK);//SJ debug
-
 	bHis = true;
-	memset(&szCcPosMsgRecv, 0x20, sizeof(szCcPosMsgRecv));
+	memset(HISGalxRecv, 0x00, sizeof(CcPosMsgRecv));
+	memset(&szCcPosMsgRecv, 0x00, sizeof(CcPosMsgRecv));
 	if( memcmp(lpGalxSend->aOperation, "I", 1) == 0 ){
-		DLP_Pos_display("Traitement HIS", 0 ,0);
-		memcpy (lpGalxSend->aCustomerPresent, lpGalxSend->aCustomerPresent,1);
+		memcpy (lpGalxSend->aCustomerPresent, lpGalxSend->aCustomerPresent, 1);
 	}
+
 	else{
-		DLP_Pos_display("Traitement SMED", 0 ,0);
-		memcpy (lpGalxSend->aCustomerPresent,lpGalxSend->aCustomerPresent,1);
+		memcpy (lpGalxSend->aCustomerPresent,lpGalxSend->aCustomerPresent, 1);
 	}
 	//Dlp_Cc(lpGalxSend, &szCcPosMsgRecv, CcCustTicket, CcDlpTicket, NULL, NULL, NULL, NULL);
 	bHis = Dlp_Cc(lpGalxSend, &szCcPosMsgRecv, NULL, NULL, NULL, NULL, NULL, NULL);
 
+	
 
-	memcpy (lpGalxRecv->bBbank , szCcPosMsgRecv.bBbank, sizeof(lpGalxRecv->bBbank));
-	memcpy (lpGalxRecv->bExplanation , szCcPosMsgRecv.bExplanation, sizeof(lpGalxRecv->bExplanation));
-	memcpy (lpGalxRecv->bPanNum , szCcPosMsgRecv.bPanNum, sizeof(lpGalxRecv->bPanNum));
+	memcpy (HISGalxRecv->bBbank , szCcPosMsgRecv.bBbank, sizeof(szCcPosMsgRecv.bBbank));
+	memcpy (HISGalxRecv->bExplanation , szCcPosMsgRecv.bExplanation, sizeof(szCcPosMsgRecv.bExplanation));
+	memcpy (HISGalxRecv->bPanNum , szCcPosMsgRecv.bPanNum, sizeof(szCcPosMsgRecv.bPanNum));
 	//memset(&lpGalxRecv->bPanNum[10],'?',sizeof(lpGalxRecv->bPanNum)-11 );
 	//memset(lpGalxRecv->bPanNum,'?',sizeof(lpGalxRecv->bPanNum) );
-	memcpy (lpGalxRecv->bResponseCode , szCcPosMsgRecv.bResponseCode, sizeof(lpGalxRecv->bResponseCode));
-	memcpy (lpGalxRecv->bSignature , szCcPosMsgRecv.bSignature, sizeof(lpGalxRecv->bSignature));
+	memcpy (HISGalxRecv->bResponseCode , szCcPosMsgRecv.bResponseCode, sizeof(szCcPosMsgRecv.bResponseCode));
+	memcpy (HISGalxRecv->bSignature , szCcPosMsgRecv.bSignature, sizeof(szCcPosMsgRecv.bSignature));
 
 
-
+	memset(lpGalxSend, 0x00, sizeof(CcPosMsgSend));
 
 
 	return bHis;
@@ -1751,7 +1760,7 @@ void InitPersoSMED(lpCcPosMsgSend Galaxy, struct tpvMessIn *c3)
 	memcpy (c3->cOperation, "z", 1);
 	memcpy (c3->cCurrencyCode, Galaxy->aCurrencyCode, 3);
 
-	memcpy (c3->cTenderType, "+p", 2);	  			    //typage ppour déterminer la personnalisation ou la transaction
+	memcpy (c3->cTenderType, "+p", 2);	  			    //typage pour déterminer la personnalisation ou la transaction
 	memcpy (c3->cReaderType, Galaxy->aReadingMode, 1);	// Lecture effectuée par C3
 
 	memset(c3->cTermNum, '0', sizeof(c3->cTermNum));
@@ -1773,7 +1782,7 @@ void InitPersoSMED(lpCcPosMsgSend Galaxy, struct tpvMessIn *c3)
 	
 	memcpy(TLV, Tag, sizeof(Tag));
 	memcpy(&TLV[4], "09", 2);
-	memcpy(&TLV[6], Galaxy->aTrnsRef, strlen(Galaxy->aTrnsRef));
+	memcpy(&TLV[6], Galaxy->aTrnsRef, sizeof(Galaxy->aTrnsRef));
 	memcpy(c3->cUserData1, TLV, sizeof(TLV));
 	
 	
@@ -3148,7 +3157,7 @@ bool StrReceive(DWORD dwTimeout, LPSTR lpData, DWORD dwLenData)
 	DWORD argp;
 	// Lire les données en plusieurs passes si elles ne sont pas immédiatement disponibles
 
-	Sleep(100); //500 On commence par temporiser (le process de Philippe est Corse !!)
+	Sleep(300); //500 On commence par temporiser (le process de Philippe est Corse !!)
 	while (dwLenData != 0)
 	{
 		// Lire la portion courante
@@ -3498,7 +3507,7 @@ void timeL (char *hhmmss)
 
 
 // permet l'annulation des cartes dans la base de données smocs
-DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]){
+DLPCCDLL_API int WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]){
 	
 	char szC3Cfg[9];
 	char Response[34];
@@ -3523,14 +3532,13 @@ DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]
 	memset(sztmp, '\0', sizeof(sztmp));
 
 
-
 	strncpy (Cible, "DLP_TAG:",8);
 
 	lg= strlen(Cible);
 	ret = -1 ;
 
 	if( ! (fp = fopen("c3Config", "r" )))
-		return FALSE;
+		return -1;
 
 	while ( fgets (line , sizeof line , fp) ) 
 	{
@@ -3543,10 +3551,13 @@ DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]
 
 	fclose(fp);
 
+	// si le tag n'est pas present dans le c3config
 	if (tagpresent == 0){
 		sprintf(errorMsg,"DLP_TAG absent du c3Config");
 		MessageBox(0, errorMsg, "Error", 0);
 	}
+
+	// On place le numero de folio dans la trame qui doit être envoyée
 	memcpy(HCid, Tag, sizeof(Tag));
 	memcpy(&HCid[4], "09", 2);
 	memcpy(&HCid[6], NumFolio, 9);
@@ -3567,7 +3578,7 @@ DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]
 		else ::WSACleanup();
 	}
 
-	if (!m_bStartedUp) return FALSE;
+	if (!m_bStartedUp) return -1;
 
 
 	/* La socket ne doit pas être déjà ouverte */
@@ -3598,7 +3609,7 @@ DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]
 		Close_IP();
 		sprintf(errorMsg,"Connexion a la socket %s impossible",ConfigSocket);
 		MessageBox(0, errorMsg, "Error", 0);
-		return FALSE;
+		return -1;
 
 	}
 
@@ -3609,7 +3620,7 @@ DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]
 		m_hSocket = INVALID_SOCKET;
 		sprintf(errorMsg,"Connexion au stratus impossible",ConfigSocket);
 		MessageBox(0, errorMsg, "Error", 0);
-		return FALSE;
+		return -1;
 
 	}
 
@@ -3618,7 +3629,7 @@ DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]
 	{
 		::closesocket(m_hSocket);
 		m_hSocket = INVALID_SOCKET;
-		return FALSE;
+		return -1;
 
 	}
 
@@ -3630,7 +3641,7 @@ DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]
 		MessageBox(0, errorMsg, "Error", 0);
 		::closesocket(m_hSocket);
 		m_hSocket = INVALID_SOCKET;
-		return FALSE;
+		return -1;
 	}
 
 	memset(Response,0x00,sizeof(Response));
@@ -3641,14 +3652,18 @@ DLPCCDLL_API BOOL WINAPI Dlp_His_Canceled_Card(char trame[409], char NumFolio[9]
 		Abort();
 		sprintf(errorMsg,"Erreur lors de la reception des donnees du serveur");
 		MessageBox(0, errorMsg, "Error", 0);
-		return FALSE;
+		return -1;
 	} 
 
 	Close_IP();
-
-	if( strcmp(&Response[30], "00") != 0){
-		return FALSE;
+	if( memcmp(&Response[30], "00", 2) == 0){
+		return 0;
 	}
+	else
+	{
+		return 99;
+	}
+	
 
-	return TRUE;
+	
 }
