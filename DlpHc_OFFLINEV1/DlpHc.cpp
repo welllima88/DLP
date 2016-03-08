@@ -3453,6 +3453,7 @@ extern "C" DllExport bool GetHCIDFromTPE(S1* msgsend, int ordre,  void (*pPos_di
 	int    Ret, szMsg, size;
 	char   sztmp[4], sztoread[2];
 	char retMsg[255];
+	int i;
 
 	memset(retMsg, 0x00, 255);
 
@@ -3512,7 +3513,14 @@ extern "C" DllExport bool GetHCIDFromTPE(S1* msgsend, int ordre,  void (*pPos_di
 	sztoread[1] = out.cUserData1[5];
 
 	if( (size = todigit(sztoread, 2)) != -1){
-		memcpy(msgsend->aChargeNum, &out.cUserData1[6], size);
+		i = 6;
+		//si HC a ete padde avec des 0 dans HIS on ne les prend pas en compte
+		while(memcmp(&out.cUserData1[i], "0", 1) == 0){
+			i++;
+			size--;
+		}
+		memset(msgsend->aChargeNum, 0x00, sizeof(msgsend->aChargeNum));
+		memcpy(msgsend->aChargeNum, &out.cUserData1[i], size);
 	}
 
 
@@ -3530,7 +3538,7 @@ extern "C" DllExport bool GetHCIDFromTPERevelation(S5* msgsend, int ordre,  void
 	int    Ret, szMsg, size;
 	char   sztmp[4], sztoread[2];
 	char retMsg[255];
-
+	int i;
 
 	memset(sztoread, 0x00, 2);
 	memset(retMsg, 0x00, 255);
@@ -3577,13 +3585,20 @@ extern "C" DllExport bool GetHCIDFromTPERevelation(S5* msgsend, int ordre,  void
 	}
 
 	// Recupérer numéro HC grâce au TAG dans cUserData
-
-	// memcpy(msgsend->aChargeNum, out.cUserData1, sizeof msgsend->aChargeNum);
 	sztoread[0] = out.cUserData1[4];
 	sztoread[1] = out.cUserData1[5];
 
 	if( (size = todigit(sztoread, 2)) != -1){
-		memcpy(msgsend->rChargeNum, &out.cUserData1[6], size);
+		i = 6;
+		
+		//si HC a ete padde avec des 0 dans HIS on les prend pas en compte
+		while(memcmp(&out.cUserData1[i], "0", 1) == 0){
+			i++;
+			size--;
+		}
+		memset(msgsend->rChargeNum, 0x00, sizeof(msgsend->rChargeNum));
+		memcpy(msgsend->rChargeNum, &out.cUserData1[i], size);
+	
 	}
 
 

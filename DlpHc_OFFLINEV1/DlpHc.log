@@ -1,4 +1,4 @@
-﻿La génération a démarré 26/02/2016 15:16:52.
+﻿La génération a démarré 07/03/2016 11:27:50.
      1>Projet "C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\DlpHc.vcxproj" sur le nœud 2 (Build cible(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D DLPHC_EXPORTS /D _VC80_UPGRADE=0x0600 /D _USING_V110_SDK71_ /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\\" /Fd"./vc110.pdb" /FR"./" /Gd /TP /analyze- /errorReport:prompt DlpHc.cpp
@@ -143,15 +143,15 @@
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
      1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3429): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3489): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3490): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3494): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3495): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3566): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3574): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3626): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3641): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3631): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3646): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : voir la déclaration de 'fopen'
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /OUT:"C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\testHc_console\DlpHc.dll" /INCREMENTAL /NOLOGO dlpc3dll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:"dlphc.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\testHc_console/DlpHc.pdb" /SUBSYSTEM:WINDOWS,"5.01" /STACK:"8","8" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\testHc_console/DlpHc.lib" /MACHINE:X86 /SAFESEH /DLL C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\DlpHc.res
@@ -160,11 +160,6 @@
          .\VB6_testDLL/StdAfx.obj
          dlpc3dll.lib
          Wsock32.lib
-     1>DlpHc.obj : warning LNK4075: ' /EDITANDCONTINUE' ignorÚ Ó cause de la spÚcification '/SAFESEH'
-     1>dlphc.def(10): warning LNK4017: instruction DESCRIPTION non prise en charge dans la plateforme cibleá; instruction ignorÚe
-            CrÚation de la bibliothÞque C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\testHc_console/DlpHc.lib et de l'objet C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\testHc_console/DlpHc.exp
-     1>testHc_console.obj : warning LNK4217: symbole dÚfini localement _Dlp_Hc importÚ dans la fonction _main
-     1>testHc_console.obj : warning LNK4217: symbole dÚfini localement _Dlp_Hc_Revelation importÚ dans la fonction _main
          DlpHc.vcxproj -> C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\testHc_console\DlpHc.dll
        BscMake:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\bscmake.exe /nologo /o"C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\testHc_console/DlpHc.bsc" ./DlpHc.sbr ./testHc_console.sbr VB6_testDLL/StdAfx.sbr
@@ -172,4 +167,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:03.86
+Temps écoulé 00:00:04.15
