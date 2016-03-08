@@ -47,6 +47,7 @@ Type CcPosMsgRecv
     bResponseCode As String * 1
     bExplanation As String * 18
     bPanNum As String * 19
+    bNumAuto As String * 9
     bBank As String * 2
     bSignature As String * 1
 End Type
@@ -73,7 +74,7 @@ Public Operation, Plafond As String
 Public EtatC3 As Boolean
 Public OrdreZ As Boolean
 Public Pan As String
-
+Public ASMPath As String
 
 '------------------------------------------------------------------
 'Déclaration du point d' entrée dans DLPCC
@@ -429,7 +430,7 @@ On Error GoTo ErrInitParam
 'Fonction Init_Param permet de chercher des informations qui se trouve dans un fichier.
 
 Dim InputData As String
-Dim bCtrl, bReg, bTerm, bOp, bPlaf As Boolean
+Dim bCtrl, bReg, bTerm, bOp, bPlaf, bASM As Boolean
 Dim Ret As Variant
 
 ChDir Trim$(Environ("USERPROFILE")) & "\my documents\reflection"
@@ -459,6 +460,11 @@ Do While Not EOF(1)  'EOF = End of File
                 If InStr(1, InputData, "Plafond", vbTextCompare) > 0 Then
                   Plafond = Mid$(InputData, InStr(1, InputData, "=", vbTextCompare) + 1, 12)
                   bPlafond = True
+                Else
+                    If InStr(1, InputData, "ASMPrinter", vbTextCompare) > 0 Then
+                      ASMPath = Mid$(InputData, InStr(1, InputData, "=", vbTextCompare) + 1, 2)
+                      bASM = True
+                    End If
                 End If
               End If
             End If
@@ -468,7 +474,7 @@ Loop
 
 Close #1
 
- If bCtrl And bReg And bTerm And bOp And bPlafond Then
+ If bCtrl And bReg And bTerm And bOp And bPlafond And bASM Then
    InitParam = True
  End If
  Exit Function
@@ -926,9 +932,9 @@ ElseIf SessionID = "OK" Then
     
     SaveCurDir = CurDir
     If InStr(WinVersion, "XP") Then
-        ChDir "C:\Program Files\DLPSmartMediaAPI\te"
+        ChDir "C:\Program Files\DLPSmartMediaAPI\" & ASMPath
     Else
-        ChDir "C:\ProgramData\DLPSmartMediaAPI\te"
+        ChDir "C:\ProgramData\DLPSmartMediaAPI\" & ASMPath
     End If
     
     Ret = start(msg)
@@ -1160,6 +1166,10 @@ errChoixTrtSmed:
 Ret = MsgBox("Erreur " & Err.Number & " - " & Err.Description, vbCritical + vbOKOnly, _
               "ChoixTrtSmed")
 End Sub
+
+
+
+
 
 
 
