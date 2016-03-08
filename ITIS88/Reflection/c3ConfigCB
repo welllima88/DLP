@@ -33,7 +33,7 @@ SSL_MODE=0
 #AXIS_COM=IPP350_JESSICA stratusv615 4021
 #AXIS_COM=IPP350_FANTASIA stratusv615 4306
 
-AXIS_COM=IPP350_LACANTINA_QA_emv stratusv610 9874
+AXIS_COM=IPP350_LACANTINA_QA_emv stratusv610 9840
 
 
 # ****************** Parametres avances ******************
