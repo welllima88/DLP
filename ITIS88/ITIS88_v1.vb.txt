@@ -200,17 +200,28 @@ If OrdreZ Then
     FileCopy CurDir & "\c3ConfigHC", CurDir & "\c3Config"
 
     HPMS.aOperation = "z"
+    
+    If Len(NumFolio) < 10 Then
+        HPMS.aAmount = "0" & Len(NumFolio)
+    Else
+        HPMS.aAmount = Len(NumFolio)
+    End If
+    
     HPMS.aCurrencyCode = "978"
-
+    
     HPMS.aCtrlNum = Controler
-
+    
     HPMS.aRegister = Register
-
+    
     HPMS.aTermNum = Terminal
-
+    
     HPMS.aCashNum = "0124562"   'Numero d' utilisateur
     
-    HPMS.aCvv2 = "p"
+    HPMS.aTrnsNum = "000001"
+    
+    NumFolio = FindClef(LitChamp(3, 7, 7)) & GetNumHotel(Controler) & LitChamp(3, 7, 7)
+    
+    HPMS.aTrnsRef = NumFolio
     
     HPMS.aCustumerPresent = "1"
     
@@ -220,18 +231,15 @@ If OrdreZ Then
     '    HPMS.aPanNum = Pan
     '    HPMS.aRedingMode = "1"
     'End If
-    NumFolio = FindClef(LitChamp(3, 7, 7)) & GetNumHotel(Controler) & LitChamp(3, 7, 7)
-    
-    HPMS.aTrnsRef = NumFolio
-    
-    If Len(NumFolio) < 10 Then
-        HPMS.aAmount = "0" & Len(NumFolio)
-    Else
-        HPMS.aAmount = Len(NumFolio)
-    End If
     
     HPMS.aRedingMode = "0"
     
+    HPMS.aPanNum = "                   " 'numero du Pan en 19 chaine
+    
+    HPMS.aEndValid = "    " 'Date de validité
+    
+    HPMS.aCvv2 = "p"
+   
     Ret = DlpHIS(HPMS, HPMR)
     
     Kill (CurDir & "\c3Config")
