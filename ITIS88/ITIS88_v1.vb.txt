@@ -754,7 +754,7 @@ Unload ChoixTrt
 
 
 If LitChamp(23, 43, 11) = "Checked Out" Then
-Ret = MsgBox("Impossible de créer le Smart Media - Folio Checked Out", _
+Ret = MsgBox("Impossible de créer la carte media - Folio Checked Out", _
                 vbInformation + vbOKOnly, "CallSmed - v1.0")
     Exit Sub
 End If
@@ -766,7 +766,7 @@ If LitChamp(22, 46, 2) = "EP" Then
 End If
 
 If LitChamp(22, 46, 11) = "NO" Then
-    Ret = MsgBox("Vous n'êtes pas sur l'écran attendu pour supprimer une carte Smart Média", _
+    Ret = MsgBox("Vous n'êtes pas sur l'écran attendu pour supprimer une carte media", _
                 vbInformation + vbOKOnly, "CallSmed - v1.0")
     Exit Sub
 End If
@@ -793,7 +793,7 @@ If RetDLPCC = 99 Or RetDLPCC = -1 Then
 End If
 
 
-Ret = MsgBox("Smart Media supprime avec succes", _
+Ret = MsgBox("carte media supprimée avec succes", _
                 vbInformation, "DeleteSmed - v1.0")
 
 Exit Sub
@@ -820,13 +820,13 @@ Dim specials As Variant
 Unload ChoixTrt
 
 If LitChamp(22, 46, 11) = "NO" Then
-    Ret = MsgBox("Vous n'êtes pas sur l'écran attendu pour générer une carte Smart Média", _
+    Ret = MsgBox("Vous n'êtes pas sur l'écran attendu pour générer une carte media", _
                 vbInformation + vbOKOnly, "CallSmed - v1.0")
     Exit Sub
 End If
 
 If LitChamp(23, 43, 11) = "Checked Out" Then
-Ret = MsgBox("Impossible de créer le Smart Media - Folio Checked Out", _
+Ret = MsgBox("Impossible de créer la carte media - Folio Checked Out", _
                 vbInformation + vbOKOnly, "CallSmed - v1.0")
     Exit Sub
 End If
@@ -851,7 +851,7 @@ If SessionID = "NP" Then
     If VaLigneColonne(22, 43, 100, True) = True Then
         Session.TransmitANSI ("  ")
    End If
-    Ret = MsgBox("Impossible de créer la smart card - Flag No Post actif", _
+    Ret = MsgBox("Impossible de créer la carte media - Flag No Post actif", _
                 vbInformation + vbOKOnly, "CallSmed - v1.0")
     Exit Sub
 
@@ -860,7 +860,7 @@ ElseIf SessionID = "NC" Then
     If VaLigneColonne(22, 43, 100, True) = True Then
         Session.TransmitANSI ("  ")
    End If
-    Ret = MsgBox("Impossible de créer la smart card (code M) - CrCode M", _
+    Ret = MsgBox("Impossible de créer la carte media (code M) - CrCode M", _
                 vbInformation + vbOKOnly, "CallSmed - v1.0")
     Exit Sub
 
@@ -868,7 +868,7 @@ ElseIf SessionID = "NB" Then
     If VaLigneColonne(22, 43, 100, True) = True Then
         Session.TransmitANSI ("  ")
    End If
-    Ret = MsgBox("Impossible de créer la smart card", _
+    Ret = MsgBox("Impossible de créer la carte media", _
                 vbInformation + vbOKOnly, "CallSmed - v1.0")
     Exit Sub
 
@@ -877,7 +877,7 @@ ElseIf SessionID = "NA" Then
         Session.TransmitANSI ("  ")
    End If
     
-   Ret = MsgBox("Vous n'êtes pas autorisés à recréer une smart card", _
+   Ret = MsgBox("Vous n'êtes pas autorisés à recréer une carte media", _
                 vbInformation + vbOKOnly, "CallSmed - v1.0")
   Exit Sub
 
@@ -886,7 +886,7 @@ ElseIf SessionID = "ER" Then
         Session.TransmitANSI ("  ")
    End If
     
-   Ret = MsgBox("Erreur dans le champ smart  card", _
+   Ret = MsgBox("Erreur dans le champ carte media", _
                 vbInformation + vbOKOnly, "CallSmed - v1.0")
   Exit Sub
 
@@ -955,8 +955,9 @@ ElseIf SessionID = "OK" Then
     
        Ret = MsgBox("DLPSmartMediaAPI - Start Erreur " & Ret & " - " & msg, vbCritical + vbOKOnly, _
                   "CallSmed")
-       ChDir SaveCurDir
+       
        Ret = stop1()
+       ChDir SaveCurDir
        Exit Sub
     End If
     
@@ -967,8 +968,9 @@ ElseIf SessionID = "OK" Then
       End If
        Ret = MsgBox("DLPSmartMediaAPI - ProductSmed Erreur " & Ret & " - " & msg, vbCritical + vbOKOnly, _
                   "CallSmed")
-       ChDir SaveCurDir
+       
        Ret = stop1()
+       ChDir SaveCurDir
        Exit Sub
     End If
     Pan = UID
@@ -994,7 +996,7 @@ ElseIf SessionID = "OK" Then
     Pan = ""
     If Not EtatC3 Then
         EtatC3 = True
-        Ret = MsgBox("Processus Smart Média interrompu durant la personnalisation", _
+        Ret = MsgBox("Processus interrompu durant la personnalisation de la carte media", _
                     vbInformation + vbOKOnly, "CallC3 - v1.0")
         Exit Sub
     End If
@@ -1166,7 +1168,7 @@ End If
 
 If Not Smedscreen Then
 
-  Ret = MsgBox("Vous n'êtes pas sur l'écran attendu pour produire/supprimer une carte Smart Média", _
+  Ret = MsgBox("Vous n'êtes pas sur l'écran attendu pour produire/supprimer une carte media", _
                 vbInformation + vbOKOnly, "CallSmed - v1.0")
   Exit Sub
 End If
