@@ -1,0 +1,1272 @@
+' CallC3
+' Macro created 27/03/2003 by Saneev
+'
+'
+' Version 3.0 du 29 juin 2015.
+'
+'--------------------------------------------------------------------------------------
+'Date Modif: Qui :                     Explications                                   :
+'--------------------------------------------------------------------------------------
+' Janv 04  : SJU : Ajout des écrans check-out.
+' 10-03-04 : SJU : Suppression du msg d'écrasement si n° de carte existe déjà.        :
+'          : SJU : Ajout du message ON/2 sur refus.                                   :
+' 24-02-10 : SJU : Lecture des cartes par clavier + protocole DLP                     :
+' 05-10-10 : SJU : Modif pour Reflection 11                                           :
+' 29-06-15 : SJU : Inversion Mois/année sur la date de validité                       :
+' 20-11-15 : SJU : Nouvelle fonction de traitement du SmartMédia                      :
+'--------------------------------------------------------------------------------------
+'
+'
+'
+'------------------------------------------------------------------
+'-----------Du terminal vers DLPCC---------------------------------
+'------------------------------------------------------------------
+
+
+Type CcPosMsgSend '
+    aOperation As String * 1
+    aAmount As String * 12
+    aCurrencyCode As String * 3
+    aCtrlNum As String * 4
+    aRegister As String * 1
+    aTermNum As String * 3
+    aCashNum As String * 7
+    aTrnsNum As String * 6
+    aTrnsRef As String * 10
+    aCustumerPresent As String * 1
+    aRedingMode As String * 1
+    aPanNum As String * 19
+    aEndValid As String * 4
+    aCvv2 As String * 3
+End Type
+'------------------------------------------------------------------
+'----------Du DLPCC vers le terminal et qui s' affiche sur---------
+'                   l' ecran
+'------------------------------------------------------------------
+Type CcPosMsgRecv
+    bResponseCode As String * 1
+    bExplanation As String * 18
+    bPanNum As String * 19
+    bNumAuto As String * 9
+    bBank As String * 2
+    bSignature As String * 1
+End Type
+'------------------------------------------------------------------
+'--------Structure Test--------------------------------------------
+'------------------------------------------------------------------
+Type CcTest
+    aOperation As String * 1
+End Type
+
+'------------------------------------------------------------------
+
+' Declaration des variable globales pour se communiquer avec DLPCC
+
+Public HPMS As CcPosMsgSend
+Public HPMR As CcPosMsgRecv
+Public TicketClient As String
+Public TicketFournisseur As String
+Public f1, f2, f3, f4 As String
+
+Public sC3NumAuto As String
+Public Controler, Register, Terminal As String
+Public Operation, Plafond As String
+Public EtatC3 As Boolean
+Public OrdreZ As Boolean
+Public Pan As String
+Public ASMPath As String
+
+'------------------------------------------------------------------
+'Déclaration du point d' entrée dans DLPCC
+'------------------------------------------------------------------
+  Public Declare Function DlpHIS Lib "DLPCC.DLL " Alias _
+"#1" (HPMS As CcPosMsgSend, HPMR As CcPosMsgRecv) As Boolean
+
+Public Declare Function DlpHISCanceledCard Lib "DLPCC.DLL " Alias _
+"#2" (ByVal Trame As String, ByVal NumFolio As String) As Integer
+
+
+'Public Declare Function DlpHIS Lib "DLPCC.dll" Alias _
+'    "#5" (HPMS As CcPosMsgSend, _
+'          HPMR As CcPosMsgRecv, _
+'          ByVal TicketClient As String, _
+'          ByVal TicketFournisseur As String, _
+'          ByVal f1 As String, _
+'          ByVal f2 As String, _
+'          ByVal f3 As String, _
+'          ByVal f4 As String) As Boolean
+
+'------------------------------------------------------------------
+'Déclaration du point d' entrée dans DLPSmartMediaAPI.dll
+'------------------------------------------------------------------
+  Public Declare Function start Lib "DLPSmartMediaAPI.dll " Alias "_start@4" (ByVal msg As String) As Integer
+  Public Declare Function stop1 Lib "DLPSmartMediaAPI.dll " Alias "_stop@0" () As Integer
+  Public Declare Function ProductSmed Lib "DLPSmartMediaAPI.dll " Alias "_productSmartMedia@16" (ByVal DataToPrint As String, ByVal DataToEncode As String, ByVal UID As String, ByVal msg As String) As Integer
+
+
+'------------------------------------------
+'Déclaration de fonctions du kernel Windows
+'------------------------------------------
+  Public Declare Sub Sleep Lib "kernel32" (ByVal dwMilliseconds As Long)
+  '
+Private Declare Function GetVersionEx Lib "kernel32" Alias "GetVersionExA" _
+    (lpVersionInformation As OSVERSIONINFO) As Long
+
+Private Type OSVERSIONINFO
+  OSVSize         As Long
+  dwVerMajor      As Long
+  dwVerMinor      As Long
+  dwBuildNumber   As Long
+  PlatformID      As Long
+  szCSDVersion    As String * 128
+End Type
+
+Private Const VER_PLATFORM_WIN32s = 0
+Private Const VER_PLATFORM_WIN32_WINDOWS = 1
+Private Const VER_PLATFORM_WIN32_NT = 2
+
+' Retourne la version de windows utiliser sur le poste
+Public Function GetWindowsVersion() As String
+    Dim osv As OSVERSIONINFO
+    osv.OSVSize = Len(osv)
+
+    If GetVersionEx(osv) = 1 Then
+        Select Case osv.PlatformID
+            Case VER_PLATFORM_WIN32s
+                GetWindowsVersion = "Win32s on Windows 3.1"
+            Case VER_PLATFORM_WIN32_NT
+                GetWindowsVersion = "Windows NT"
+
+                Select Case osv.dwVerMajor
+                    Case 3
+                        GetWindowsVersion = "Windows NT 3.5"
+                    Case 4
+                        GetWindowsVersion = "Windows NT 4.0"
+                    Case 5
+                        Select Case osv.dwVerMinor
+                            Case 0
+                                GetWindowsVersion = "Windows 2000"
+                            Case 1
+                                GetWindowsVersion = "Windows XP"
+                            Case 2
+                                GetWindowsVersion = "Windows Server 2003"
+                        End Select
+                    Case 6
+                        Select Case osv.dwVerMinor
+                            Case 0
+                                GetWindowsVersion = "Windows Vista/Server 2008"
+                            Case 1
+                                GetWindowsVersion = "Windows 7/Server 2008 R2"
+                        End Select
+                End Select
+
+            Case VER_PLATFORM_WIN32_WINDOWS:
+                Select Case osv.dwVerMinor
+                    Case 0
+                        GetWindowsVersion = "Windows 95"
+                    Case 90
+                        GetWindowsVersion = "Windows Me"
+                    Case Else
+                        GetWindowsVersion = "Windows 98"
+                End Select
+        End Select
+    Else
+        GetWindowsVersion = "Unable to identify your version of Windows."
+    End If
+End Function
+
+Sub CallC3()
+
+On Error GoTo errCallC3
+Dim Ret As Variant
+Dim PanNum As String
+Dim Mois As String
+Dim Année As String
+Dim CheckIn, CheckOut As Boolean
+Dim NumFolio As Variant
+
+CheckIn = False
+CheckOut = False
+EtatC3 = True
+
+If LitChamp(22, 46, 11) = "NO" Then
+    Ret = MsgBox("Vous n'êtes pas sur l'écran attendu pour cette action", _
+                vbInformation + vbOKOnly, "CallC3 - v1.0")
+    Exit Sub
+End If
+
+
+If OrdreZ Then
+    FileCopy CurDir & "\c3ConfigHC", CurDir & "\c3Config"
+
+    HPMS.aOperation = "z"
+    
+    'Permet d'avoir la taille de la chaine a traiter utile dans DLPCC
+    If Len(NumFolio) < 10 Then
+        HPMS.aAmount = "0" & Len(NumFolio)
+    Else
+        HPMS.aAmount = Len(NumFolio)
+    End If
+    
+    HPMS.aCurrencyCode = "978"
+    
+    HPMS.aCtrlNum = Controler
+    
+    HPMS.aRegister = Register
+    
+    HPMS.aTermNum = Terminal
+    
+    HPMS.aCashNum = "0124562"   'Numero d' utilisateur
+    
+    HPMS.aTrnsNum = "000001"
+    
+    NumFolio = FindClef(LitChamp(3, 7, 7)) & GetNumHotel(Controler) & LitChamp(3, 7, 7)
+    NumFolio = Format$(NumFolio, "000000000")
+    
+    HPMS.aTrnsRef = NumFolio
+    
+    HPMS.aCustumerPresent = "1"
+    
+    ' a decommenter si on ne veut plus que le guest passe sa carte au moment de l init
+    'If Pan = Null Then
+    '    HPMS.aRedingMode = "0"
+    'Else
+    '    HPMS.aPanNum = Pan
+    '    HPMS.aRedingMode = "1"
+    'End If
+    
+    ' mettre en commentaire cette ligne si on decomment le bloc du dessus
+    HPMS.aRedingMode = "0"
+    
+    HPMS.aPanNum = "                   " 'numero du Pan en 19 chaine
+    
+    HPMS.aEndValid = "    " 'Date de validité
+    
+    HPMS.aCvv2 = "p"
+   
+    Ret = DlpHIS(HPMS, HPMR)
+    
+    Kill (CurDir & "\c3Config")
+
+    
+    If Not Ret Or HPMR.bResponseCode <> 0 Then
+      EtatC3 = False
+      OrdreZ = False
+      Exit Sub
+    End If
+    OrdreZ = False
+    
+Exit Sub
+End If
+
+
+If Not UpdateMacroToolBar Then  ' Appel de la fonction pour enlever AddRef
+  Exit Sub
+End If
+
+' Ecran de check-in
+'-------------------
+If (RechercheEcran("* * *   C H A N G E   F O L I O   * * *", False) Or _
+    RechercheEcran("* * *   W A L K - I N   * * *", False) Or _
+    RechercheEcran("* * *   C H E C K - I N   * * *", False) Or _
+    RechercheEcran("* * *   N E W   R E S E R V A T I O N   * * *", False) Or _
+    RechercheEcran("* * *   C H A N G E   R E S E R V A T I O N   * * *", False) _
+    ) And _
+    RechercheEcran("CrCard", False) Then ' Appel de la fonction RechercheEcran
+  CheckIn = True
+End If
+
+
+' Ecran de check-out
+'-------------------
+If Not RechercheEcran("Authorization Request", False) Or _
+   Not RechercheEcran("CrCard", False) Then ' Appel de la fonction RechercheEcran
+   'Recherche de la fenêtre d' application
+Else
+  CheckOut = True
+End If
+
+If Not CheckIn And Not CheckOut Then
+  EtatC3 = False
+  Ret = MsgBox("Vous n'êtes pas sur l'écran attendu pour vérifier la carte de crédit", _
+                vbInformation + vbOKOnly, "CallC3 - v3.0")
+  Exit Sub
+End If
+
+If Not InitParam Then ' Appel de la fonction InitParam
+  Exit Sub
+End If
+
+FileCopy CurDir & "\c3ConfigCB", CurDir & "\c3Config"
+
+HPMS.aOperation = Operation
+HPMS.aAmount = Format$(Plafond, "000000000000")  ' Montant en centime d' Euro
+HPMS.aCurrencyCode = "978"
+
+HPMS.aCtrlNum = Controler
+
+HPMS.aRegister = Register
+
+HPMS.aTermNum = Terminal
+
+HPMS.aCashNum = "0124562"   'Numero d' utilisateur
+
+HPMS.aTrnsNum = "000001"
+HPMS.aTrnsRef = "          "
+HPMS.aCustumerPresent = "0"
+HPMS.aRedingMode = "0"
+HPMS.aPanNum = "                   " 'numero du Pan en 19 chaine
+HPMS.aEndValid = "    " 'Date de validité
+HPMS.aCvv2 = "   "
+
+Ret = DlpHIS(HPMS, HPMR)
+
+'   szTrn = DlpHIS(HPMS, HPMR, _
+                  vbNullString, _
+                  vbNullString, _
+                  vbNullString, _
+                  vbNullString, _
+                  vbNullString, _
+                  vbNullString)
+
+'MsgBox HPMR.bBank & "*" _
+'& HPMR.bExplanation & "*" _
+'& HPMR.bPanNum & "*" _
+'& HPMS.aEndValid & "*" _
+'& HPMR.bResponseCode  'Affichage Par Mesage box du renseignement necessaire
+
+'Ret = MsgBox(HPMR.bPanNum, vbApplicationModal, "Trace")
+
+'Pan = Replace(HPMR.bPanNum, "?", " ") 'Formatage du Pan
+Kill (CurDir & "\c3Config")
+If Not Ret Or HPMR.bResponseCode <> 0 Then
+  EtatC3 = False
+  Ret = MsgBox("Code : " & HPMR.bResponseCode & " - Carte refusée : " & HPMR.bExplanation, vbExclamation, "confirmation")
+  Exit Sub
+End If
+  
+Pan = EnleveZero(HPMR.bPanNum) 'Formatage du Pan
+PanNum = LTrim$(Pan)
+
+If Ret And CheckIn Then
+  If Not TraiteCheckIn(PanNum) Then Exit Sub
+Else
+  If Ret And CheckOut Then
+    If Not TraiteCheckOut(PanNum) Then Exit Sub
+  Else
+    EtatC3 = False
+    Ret = MsgBox("Operation non conforme", vbExclamation, "confirmation")
+  End If
+End If
+Exit Sub
+
+
+errCallC3:
+ EtatC3 = False
+ Ret = MsgBox("Erreur " & Err.Number & " - " & Err.Description, vbCritical + vbOKOnly, _
+              "CallC3")
+ 
+
+End Sub
+
+
+Function RechercheEcran(Ecran As String, msg As Boolean) As Boolean
+On Error GoTo errMauvaisEcran
+Dim Verif As Variant
+
+RechercheEcran = False
+
+If Session.FindText(Ecran, 1, 1) Then
+  RechercheEcran = True
+End If
+
+Exit Function
+
+
+errMauvaisEcran:
+  Verif = MsgBox("Erreur " & Err.Number & " " & Err.Description & vbCrLf & _
+                vbOKOnly + vbCritical, "Module RechercheEcran")
+ RechercheEcran = False
+
+End Function
+
+
+Function VaLigneColonne(Ligne As Integer, Colonne As Integer, _
+NbIterationMax As Integer, msg As Boolean) As Boolean
+
+'On Error GoTo ErrVaLigneColonne
+'---------------------------------------------------------------------
+'Fonction de déplacement dans l'écran par TAB
+'
+' Param 1 : N° de ligne devant être atteinte
+' Param 2 : N° de colonne devant être atteint
+' Param 3 : Nb de TAB maxi pouvant être fait
+' Param 4 : Paramètre pour afficher ou non si le curseur est en place
+' Retour  : Vrai si le curseur se trouve sur la ligne voulue par Param1
+'---------------------------------------------------------------------
+
+Dim Ret As Variant
+Dim i As Integer
+
+
+  VaLigneColonne = False
+  i = 0
+  
+  While (NbIterationMax > i _
+         And (Ligne <> Session.CursorRow _
+         Or Colonne <> Session.CursorColumn))
+    Session.TransmitTerminalKey (rcIBMTabKey)
+    DoEvents
+    i = i + 1
+  Wend
+  
+  If Ligne = Session.CursorRow And Colonne = Session.CursorColumn Then
+    VaLigneColonne = True
+  Else
+    If msg Then
+      Ret = MsgBox("Le curseur ne peut pas se placer à l'endroit voulu " & _
+      Ligne & "/" & Colonne, vbOKOnly + vbCritical, "Module VaLigneColonne")
+    End If
+  End If
+
+Exit Function
+ErrVaLigneColonne:
+ Ret = MsgBox("Erreur " & Err.Number & " " & Err.Description, _
+            vbOKOnly + vbCritical, "Module VaLigneColonne")
+ VaLigneColonne = False
+End Function
+
+
+Function InitParam() As Boolean
+On Error GoTo ErrInitParam
+'Fonction Init_Param permet de chercher des informations qui se trouve dans un fichier.
+
+Dim InputData As String
+Dim bCtrl, bReg, bTerm, bOp, bPlaf, bASM As Boolean
+Dim Ret As Variant
+
+ChDir Trim$(Environ("USERPROFILE")) & "\my documents\reflection"
+Open "Hotel.ini" For Input As #1 'Hotel.ini est le nom du Fichier
+InitParam = False
+Do While Not EOF(1)  'EOF = End of File
+                        ' Avec ce parametre on peut lire tous le contenue du fichier
+        Line Input #1, InputData
+
+    If InStr(1, InputData, "Controler", vbTextCompare) > 0 Then
+    'Instr est un paramètre qui permet de cherher un String
+        Controler = Mid$(InputData, InStr(1, InputData, "=", vbTextecompare) + 1, 4)
+        bCtrl = True
+    Else
+        If InStr(1, InputData, "Register", vbTextCompare) > 0 Then
+            Register = Mid$(InputData, InStr(1, InputData, "=", vbTextCompare) + 1, 1)
+            bReg = True
+        Else
+            If InStr(1, InputData, "Terminal", vbTextCompare) > 0 Then
+              Terminal = Mid$(InputData, InStr(1, InputData, "=", vbTextCompare) + 1, 3)
+              bTerm = True
+            Else
+              If InStr(1, InputData, "Operation", vbTextCompare) > 0 Then
+                Operation = Mid$(InputData, InStr(1, InputData, "=", vbTextCompare) + 1, 1)
+                bOp = True
+              Else
+                If InStr(1, InputData, "Plafond", vbTextCompare) > 0 Then
+                  Plafond = Mid$(InputData, InStr(1, InputData, "=", vbTextCompare) + 1, 12)
+                  bPlafond = True
+                Else
+                    ' Champ pour determiner ou sur quel version pointe ITIS pour les API de l iimprimante
+                    If InStr(1, InputData, "ASMPrinter", vbTextCompare) > 0 Then
+                      ASMPath = Mid$(InputData, InStr(1, InputData, "=", vbTextCompare) + 1, 2)
+                      bASM = True
+                    End If
+                End If
+              End If
+            End If
+        End If
+    End If
+Loop
+
+Close #1
+
+ If bCtrl And bReg And bTerm And bOp And bPlafond And bASM Then
+   InitParam = True
+ End If
+ Exit Function
+ 
+ErrInitParam:
+  InitParam = False
+  Ret = MsgBox("Erreur " & Err.Number & " " & Err.Description & vbCrLf & _
+               "RepCourant : " & CurDir, _
+            vbOKOnly + vbCritical, "Module InitParam")
+End Function
+
+
+
+Function LitChamp(Ligne As Integer, Colonne As Integer, longueur As Integer) As String
+On Error GoTo ErrLitChamp
+
+Dim PanExistant As Variant
+Dim Verif As Variant
+
+  Data = ""
+  LitChamp = ""
+
+  Data = Session.GetDisplayText(Ligne, Colonne, longueur)
+  
+  If Len(Trim$(Data)) > 0 Then
+    LitChamp = Trim$(Data)
+  End If
+  
+Exit Function
+
+ErrLitChamp:
+Verif = MsgBox("Erreur " & Err.Number & " " & Err.Description & vbCrLf & _
+                vbOKOnly + vbCritical, "Module LitChamp")
+
+
+End Function
+
+
+Function RechercheChamp(Champ As String, x As Variant, y As Variant) As Boolean
+On Error GoTo ErrRechercheChamp
+
+Dim Ret As Variant
+
+  RechercheChamp = False
+
+  Ret = Session.FindText(Champ, 1, 1)
+  
+  If Ret Then
+   x = Session.FoundTextColumn
+   y = Session.FoundTextRow
+   RechercheChamp = True
+  Else
+   RechercheChamp = False
+  End If
+  
+Exit Function
+
+ErrRechercheChamp:
+ Verif = MsgBox("Erreur " & Err.Number & " " & Err.Description & vbCrLf & _
+                vbOKOnly + vbCritical, "Module RechercheChamp")
+ RechercheChamp = False
+
+
+End Function
+
+
+Function UpdateMacroToolBar() As Boolean
+On Error GoTo errUpdateMacroToolBar
+
+Dim Ret As Variant
+
+ChDir Trim$(Environ("USERPROFILE")) & "\my documents\reflection"
+
+' Ajout du bouton CB
+  Session.RemoveToolbarButton "Standard", 7
+  Session.DefineToolbarButton "Standard", 7, rcNo, "", _
+                         rcBmpDISPLAYSETUP, "", rcBmpDISPLAYSETUP, _
+                         "CB", "Carte - Ver. 3.0", "", _
+                         "RunMacro ""NewMacros.CallC3"", """""
+
+
+  ' Ajout du bouton Smart Media
+  Session.RemoveToolbarButton "Standard", 8
+  
+  Session.DefineToolbarButton "Standard", 8, rcNo, "sans-contact.bmp", _
+                         0, 0, 0, _
+                         "SC", "SMED - Ver. 1.0", "", _
+                         "RunMacro ""NewMacros.ChoixTrtSmed"", """""
+
+
+
+
+
+UpdateMacroToolBar = True
+Exit Function
+
+errUpdateMacroToolBar:
+ Ret = MsgBox("Erreur " & Err.Number & " " & Err.Description & vbCrLf & _
+                vbOKOnly + vbCritical, "Module UpdateMacroToolBar")
+ UpdateMacroToolBar = False
+ 
+End Function
+
+
+
+Function TraiteCheckIn(Pan As String) As Boolean
+On Error GoTo errTraiteCheckIn
+
+Dim Ret As Variant
+Dim i As Integer
+
+TraiteCheckIn = False
+
+If HPMR.bResponseCode = "0" Then 'L'emplacement du curseur
+    If VaLigneColonne(13, 39, 100, True) = True Then
+      'If Len(LitChamp(13, 39, 19, False)) > 0 Then
+      'Detection de presence de N°de Pan
+        'Ret = MsgBox("Voulez-vous écraser l'ancien numéro ?", vbYesNo, "Choix")
+        'If Ret = vbNo Then
+        '  TraiteCheckIn = True
+        '  Exit Function
+        'Else
+        '  Session.TransmitANSI (Pan) 'Affichage du PAN
+        '  Session.TransmitTerminalKey (rcIBMTabKey) 'Deplacement par TAB
+        '  Mois = Mid(HPMS.aEndValid, 3, 2)
+        '  Session.TransmitANSI (Mois)
+        '  Année = Mid(HPMS.aEndValid, 1, 2)
+        '  Session.TransmitANSI (Année)
+        'End If
+      'Else 'Champ vierge : on écrit
+       If Len(Pan) < 19 Then
+          For i = (Len(Pan) + 1) To 19 'Pour compléter par des blancs à droite
+            Pan = Pan & " "
+          Next i
+        End If
+ 
+        Session.TransmitANSI (Pan) 'Affichage du PAN
+        Session.TransmitTerminalKey (rcIBMTabKey) 'Deplacement par TAB
+        Mois = Mid(HPMS.aEndValid, 3, 2)
+        Session.TransmitANSI (Mois)
+        Année = Mid(HPMS.aEndValid, 1, 2)
+        Session.TransmitANSI (Année)
+      'End If
+    End If
+  Else
+    Ret = MsgBox("CheckIn : Carte non valide " & vbCrLf & _
+                  "Motif refus : " & HPMR.bExplanation, vbExclamation, "Vérification Carte")
+  End If
+
+TraiteCheckIn = True
+Exit Function
+
+errTraiteCheckIn:
+  Ret = MsgBox("Erreur " & Err.Number & " " & Err.Description & vbCrLf & _
+                vbOKOnly + vbCritical, "Module TraiteCheckIn")
+ TraiteCheckIn = False
+End Function
+
+
+Function TraiteCheckOut(PanNum As String) As Boolean
+On Error GoTo errTraiteCheckOut
+
+Dim Ret As Variant
+Dim x, y As Variant
+Dim i As Integer
+
+TraiteCheckOut = False
+
+If HPMR.bResponseCode = "0" Then 'L'emplacement du curseur
+    If RechercheChamp("Authorization Request", x, y) Then
+     If VaLigneColonne((y + 2), (x + 12), 10, True) = True Then
+      'If Len(LitChamp((y + 2), (x + 12), 20, False)) > 0 Then
+      'Detection de presence de N°de Pan
+      '  Ret = MsgBox("Voulez-vous écraser l'ancien numéro ?", vbYesNo, "Choix")
+      '  If Ret = vbNo Then
+      '    TraiteCheckOut = True
+      '    Exit Function
+      '  Else
+      '    If Len(PanNum) < 20 Then PanNum = PanNum & String(20 - Len(PanNum), " ")
+      '    Session.TransmitANSI (PanNum) 'Affichage du PAN
+      '    If Session.CursorRow < (y + 3) Then Session.TransmitTerminalKey (rcIBMTabKey) 'Deplacement par TAB
+      '    Mois = Mid(HPMS.aEndValid, 3, 2)
+      '    Session.TransmitANSI (Mois)
+      '    Année = Mid(HPMS.aEndValid, 1, 2)
+      '    Session.TransmitANSI (Année)
+      '  End If
+      'Else 'Champ vierge : on écrit
+        If Len(Pan) < 19 Then
+          For i = (Len(Pan) + 1) To 19 'Pour compléter par des blancs à droite
+            Pan = Pan & " "
+          Next i
+        End If
+        
+        Session.TransmitANSI (PanNum) 'Affichage du PAN
+        Session.TransmitTerminalKey (rcIBMTabKey) 'Deplacement par TAB
+        Mois = Mid(HPMS.aEndValid, 3, 2)
+        Session.TransmitANSI (Mois)
+        Année = Mid(HPMS.aEndValid, 1, 2)
+        Session.TransmitANSI (Année)
+      'End If
+    End If
+  Else
+    Ret = MsgBox("CheckOut : operation non conforme", vbExclamation, "confirmation")
+  End If
+  Else
+    Ret = MsgBox("CheckIn : Carte non valide " & vbCrLf & _
+                  "Motif refus : " & HPMR.bExplanation, vbExclamation, "Vérification Carte")
+End If
+ TraiteCheckOut = True
+Exit Function
+
+errTraiteCheckOut:
+  Ret = MsgBox("Erreur " & Err.Number & " " & Err.Description & vbCrLf & _
+                vbOKOnly + vbCritical, "Module TraiteCheckOut")
+ TraiteCheckOut = False
+End Function
+
+
+Function EnleveZero(Pan As String) As String
+On Error GoTo errEnleveZero
+
+Dim Ret As Variant
+Dim i As Integer
+
+  For i = 1 To Len(Pan)
+   If Mid$(Pan, i, 1) <> "0" Then Exit For
+  Next i
+  
+  
+  EnleveZero = Mid$(Pan, i, Len(Pan) - i + 1)
+  
+Exit Function
+
+errEnleveZero:
+   Ret = MsgBox("Erreur " & Err.Number & " " & Err.Description & vbCrLf & _
+                vbOKOnly + vbCritical, "Module EnleveZero")
+   EnleveZero = " "
+End Function
+' Mise au bon format du champ nombre de guest pour la carte
+Function TrtNbGuest(NbGuest As String) As String
+On Error GoTo ErrTrtNbGuest
+Dim i As Integer
+Dim res As String
+Dim currentChar As String
+
+If Len(Trim$(Mid$(NbGuest, InStr(NbGuest, "/") + 1, Len(NbGuest)))) = 0 Then
+    TrtNbGuest = Format$(Trim$(Mid$(NbGuest, 1, InStr(NbGuest, "/") - 1)), "00") & "/00"
+Else
+    TrtNbGuest = Format$(Trim$(Mid$(NbGuest, 1, InStr(NbGuest, "/") - 1)), "00") & "/" & Format$(Trim$(Mid$(NbGuest, InStr(NbGuest, "/") + 1, Len(NbGuest))), "00")
+End If
+
+
+Exit Function
+ErrTrtNbGuest:
+    Ret = MsgBox("Erreur " & Err.Number & " " & Err.Description & vbCrLf & _
+                vbOKOnly + vbCritical, "Module TrtNbGuest")
+    TrtNbGuest = " "
+End Function
+
+
+'Fonction qui permet de supprimer l ensemble des smart medias d'un compte
+Sub DeleteSmed()
+On Error GoTo ErrDeleteSMED
+Dim Ret As Variant
+Dim Trame As String
+Dim espace As String
+Dim i, j As Integer
+Dim NumFolio As Variant
+Dim RetDLPCC As Integer
+Dim Response As String
+Unload ChoixTrt
+
+'Test si le folio est checked out
+If LitChamp(23, 43, 11) = "Checked Out" Then
+Ret = MsgBox("Impossible de créer la carte media - Folio Checked Out", _
+                vbInformation + vbOKOnly, "CallSmed - v1.0")
+    Exit Sub
+End If
+
+'Si le 2e champ cache a pour valeur EP, aucun smart media n a ete cree
+If LitChamp(22, 46, 2) = "EP" Then
+   Ret = MsgBox("Pas de carte créee", _
+                vbInformation + vbOKOnly, "DeleteSmed - v1.0")
+    Exit Sub
+End If
+
+' Si le cast accede au folio via le menu manager
+If LitChamp(22, 46, 11) = "NO" Then
+    Ret = MsgBox("Vous n'êtes pas sur l'écran attendu pour supprimer une carte media", _
+                vbInformation + vbOKOnly, "CallSmed - v1.0")
+    Exit Sub
+End If
+
+
+If Not InitParam Then ' Appel de la fonction InitParam
+  Exit Sub
+End If
+
+' On construit la trame a envoyer au stratus qui l envoi a SMOCS
+espace = Space(274)
+Trame = Space(409)
+Response = Space(34)
+
+'Calcule le numero HC
+NumFolio = FindClef(LitChamp(3, 7, 7)) & GetNumHotel(Controler) & LitChamp(3, 7, 7)
+NumFolio = Format$(NumFolio, "000000000")
+
+'on copie le fichier c3configHC et le renomme en c3config pour pouvoir l utiliser
+FileCopy CurDir & "\c3ConfigHC", CurDir & "\c3Config"
+Trame = "M0502" & Controler & Register & Terminal & "4757337" & espace & "2" & Space(114)
+
+'appel a la dll DLPCC
+RetDLPCC = DlpHISCanceledCard(Trame, NumFolio)
+
+'Detruit le fichier c3config
+Kill (CurDir & "\c3Config")
+
+If RetDLPCC = 99 Or RetDLPCC = -1 Then
+    Ret = MsgBox("Impossible de supprimer le(s) medias", _
+                vbInformation, "DeleteSmed - v1.0")
+    Exit Sub
+End If
+
+
+Ret = MsgBox("carte media supprimée avec succes", _
+                vbInformation, "DeleteSmed - v1.0")
+
+Exit Sub
+ErrDeleteSMED:
+    Ret = MsgBox("Erreur " & Err.Number & " " & Err.Description & vbCrLf & _
+                vbOKOnly + vbCritical, "Delete SMED")
+End Sub
+
+'Fonction de production du SmartMedia
+Sub CallSmed()
+On Error GoTo errCallSmed
+Dim Ret As Variant
+Dim WinVersion As Variant
+Dim NumFolio As Variant
+Dim Nom, Prenom, NbGuest, NomHotel As String
+Dim DbtSejour, FinSejour As String
+Dim Langue As Variant
+Dim ParamStart, DataToPrint, DataToEncode, UID As String
+Dim SaveCurDir As String
+Dim msg As String
+Dim SessionID As String
+Dim specials As Variant
+
+
+'decharge la popup ChoixTrt
+Unload ChoixTrt
+
+
+'Test si le CastMember accede au folio via la menu manager
+If LitChamp(22, 46, 11) = "NO" Then
+    Ret = MsgBox("Vous n'êtes pas sur l'écran attendu pour générer une carte media", _
+                vbInformation + vbOKOnly, "CallSmed - v1.0")
+    Exit Sub
+End If
+
+
+'Test si le folio est checked out
+If LitChamp(23, 43, 11) = "Checked Out" Then
+Ret = MsgBox("Impossible de créer la carte media - Folio Checked Out", _
+                vbInformation + vbOKOnly, "CallSmed - v1.0")
+    Exit Sub
+End If
+
+' on accede au champ cache
+If VaLigneColonne(22, 43, 100, True) = True Then
+    Session.TransmitANSI ("HC")
+    Session.TransmitTerminalKey (rcIBMF17Key)
+Else
+    Exit Sub
+End If
+
+' on place la valeur HC dans le champs cache qui est lue par le programme de Brian B.
+While LitChamp(22, 43, 2) = "HC"
+ 
+ Sleep 150
+Wend
+
+SessionID = LitChamp(22, 43, 2)
+
+'Test les differentes valeurs du champs caché du programme de Brian B.
+
+' Flag no post actif
+If SessionID = "NP" Then
+    If VaLigneColonne(22, 43, 100, True) = True Then
+        Session.TransmitANSI ("  ")
+   End If
+    Ret = MsgBox("Impossible de créer la carte media - Flag No Post actif", _
+                vbInformation + vbOKOnly, "CallSmed - v1.0")
+    Exit Sub
+
+' Code M utilise dans HIS
+ElseIf SessionID = "NC" Then
+    If VaLigneColonne(22, 43, 100, True) = True Then
+        Session.TransmitANSI ("  ")
+   End If
+    Ret = MsgBox("Impossible de créer la carte media (code M) - CrCode M", _
+                vbInformation + vbOKOnly, "CallSmed - v1.0")
+    Exit Sub
+
+ElseIf SessionID = "NB" Then
+    If VaLigneColonne(22, 43, 100, True) = True Then
+        Session.TransmitANSI ("  ")
+   End If
+    Ret = MsgBox("Impossible de créer la carte media", _
+                vbInformation + vbOKOnly, "CallSmed - v1.0")
+    Exit Sub
+
+ElseIf SessionID = "NA" Then
+   If VaLigneColonne(22, 43, 100, True) = True Then
+        Session.TransmitANSI ("  ")
+   End If
+    
+   Ret = MsgBox("Vous n'êtes pas autorisés à recréer une carte media", _
+                vbInformation + vbOKOnly, "CallSmed - v1.0")
+  Exit Sub
+
+' Si le champ est rempli avec une valeur inconnu
+ElseIf SessionID = "ER" Then
+   If VaLigneColonne(22, 43, 100, True) = True Then
+        Session.TransmitANSI ("  ")
+   End If
+    
+   Ret = MsgBox("Erreur dans le champ carte media", _
+                vbInformation + vbOKOnly, "CallSmed - v1.0")
+  Exit Sub
+
+' Traitement HC smart media ok
+ElseIf SessionID = "OK" Then
+    
+    ' On reinitialise le champ cache
+    If VaLigneColonne(22, 43, 100, True) = True Then
+          Session.TransmitANSI ("  ")
+    End If
+
+    If Not InitParam Then ' Appel de la fonction InitParam
+      If VaLigneColonne(22, 43, 100, True) = True Then
+          Session.TransmitANSI ("  ")
+      End If
+      Exit Sub
+    End If
+    
+    'Screescrapping des informations sur l ecran de HIS
+    Nom = LitChamp(7, 14, 30)
+    Prenom = Trim$(Mid$(Nom, InStr(Nom, ",") + 1, Len(Nom)))
+    Nom = Trim$(Mid$(Nom, 1, InStr(Nom, ",") - 1))
+    
+    NumFolio = FindClef(LitChamp(3, 7, 7)) & GetNumHotel(Controler) & LitChamp(3, 7, 7)
+    
+    'Si le numero de folio n est pas sur 9 caracteres on pad avec des 0 à gauche
+    NumFolio = Format$(NumFolio, "000000000")
+    
+    DbtSejour = LitChamp(3, 63, 6)
+    
+    ' Le format de date peut etre sur 5 ou 6 caractères, on ajoute un zero a gauche lorsque sur 5 caracteres
+    If Len(DbtSejour) = 6 Then
+        DbtSejour = Mid$(DbtSejour, 1, 2) & "/" & Mid$(DbtSejour, 3, 2) & "/" & Year(Now())
+    Else
+        DbtSejour = "0" & Mid$(DbtSejour, 1, 1) & "/" & Mid$(DbtSejour, 2, 2) & "/" & Year(Now())
+    End If
+    
+    FinSejour = LitChamp(3, 74, 6)
+    If Len(FinSejour) = 6 Then
+        FinSejour = Mid$(FinSejour, 1, 2) & "/" & Mid$(FinSejour, 3, 2) & "/" & Year(Now())
+    Else
+        FinSejour = "0" & Mid$(FinSejour, 1, 1) & "/" & Mid$(FinSejour, 2, 2) & "/" & Year(Now())
+    End If
+    
+    msg = Space(512): DataToPrint = Space(512): DataToEncode = Space(512): UID = Space(512)
+    NbGuest = TrtNbGuest(LitChamp(5, 13, 7))
+    Langue = GetCodeLangue(LitChamp(15, 79, 1))
+    NomHotel = GetNomHotel(Controler)
+    specials = LitChamp(16, 10, 38)
+    DataToPrint = Space(512)
+    DataToEncode = ";" & Trim$(Langue) & ";;;;" & NumFolio & ";"
+    
+    ' on test si le chmaps special NB est present dans HIS pour rajouter ou non le N sur la carte du guest
+    If InStr(specials, "NB") Then
+        DataToPrint = "N;" & Nom & ";" & Prenom & ";" & NbGuest & ";" & DbtSejour & ";-;" & FinSejour & ";" & NomHotel & ";;Media"
+    Else
+       DataToPrint = ";" & Nom & ";" & Prenom & ";" & NbGuest & ";" & DbtSejour & ";-;" & FinSejour & ";" & NomHotel & ";;Media"
+    End If
+    
+    ' on recupere la version de windows pour connaitre le dossier dans lequel aller chercher les API pour utiliser les imprimantes
+    WinVersion = GetWindowsVersion()
+    
+    SaveCurDir = CurDir
+    If InStr(WinVersion, "XP") Then
+        ChDir "C:\Program Files\DLPSmartMediaAPI\" & ASMPath
+    Else
+        ChDir "C:\ProgramData\DLPSmartMediaAPI\" & ASMPath
+    End If
+    
+    ' Appel des fonctions de TSE
+    'start demarre l imprimante et dois toujours etre utilise avec un stop
+    Ret = start(msg)
+    If Ret <> 1 Then
+      If VaLigneColonne(22, 43, 100, True) = True Then
+          Session.TransmitANSI ("  ")
+      End If
+    
+       Ret = MsgBox("DLPSmartMediaAPI - Start Erreur " & Ret & " - " & msg, vbCritical + vbOKOnly, _
+                  "CallSmed")
+       
+       Ret = stop1()
+       ' on retourne au repertoire courant
+       ChDir SaveCurDir
+       Exit Sub
+    End If
+    
+    Ret = ProductSmed(DataToPrint, DataToEncode, UID, msg)
+    If Ret <> 1 Then
+      If VaLigneColonne(22, 43, 100, True) = True Then
+          Session.TransmitANSI ("  ")
+      End If
+       Ret = MsgBox("DLPSmartMediaAPI - ProductSmed Erreur " & Ret & " - " & msg, vbCritical + vbOKOnly, _
+                  "CallSmed")
+       
+       Ret = stop1()
+       ' on retourne au repertoire courant
+       ChDir SaveCurDir
+       Exit Sub
+    End If
+    
+    'on recupere UID fournit par l imprimante
+    Pan = UID
+    
+    Ret = stop1()
+    If Ret <> 1 Then
+      If VaLigneColonne(22, 43, 100, True) = True Then
+          Session.TransmitANSI ("  ")
+      End If
+      Pan = ""
+       Ret = MsgBox("DLPSmartMediaAPI - stop1 Erreur " & Ret, vbCritical + vbOKOnly, _
+                  "CallSmed")
+       ChDir SaveCurDir
+       Exit Sub
+    End If
+    
+    ' Revient au repertoire courant (Reflection)
+    ChDir SaveCurDir
+    
+    ' OrdreZ a true indique le cas smart media
+    OrdreZ = True
+    Call CallC3
+    OrdreZ = False
+    
+    Pan = ""
+    If Not EtatC3 Then
+        EtatC3 = True
+        Ret = MsgBox("Processus interrompu durant la personnalisation de la carte media", _
+                    vbInformation + vbOKOnly, "CallC3 - v1.0")
+        Exit Sub
+    End If
+End If
+
+Exit Sub
+errCallSmed:
+  If VaLigneColonne(22, 43, 100, True) = True Then
+      Session.TransmitANSI ("  ")
+  End If
+ Ret = MsgBox("Erreur " & Err.Number & " - " & Err.Description, vbCritical + vbOKOnly, _
+              "CallSmed")
+ 
+
+End Sub
+
+
+' Algo permettant de calculer la clé pour HC
+Function FindClef(chaine As String) As String
+On Error GoTo ErrClef
+
+Dim Ret As Variant
+Dim i, j As Integer
+Dim total As Variant
+Dim ires As Integer
+Dim icle As Integer
+Dim szi As String
+Dim num As Integer
+Dim div As Integer
+Dim cpt As Integer
+
+total = 0
+cpt = 1
+
+'en fonction de la longueur du CNF on recalcule l indice de debut de chaine
+j = 9 - Len(chaine)
+
+For i = j To 8
+
+    'on parcours la chaine caractere par caractere
+    szi = ""
+    szi = Mid$(chaine, cpt, 1)
+    
+    cpt = cpt + 1
+    If Not IsNumeric(szi) Then
+        If szi = "" Then
+            ires = i * 0
+            total = total + ires
+        End If
+    Else
+    
+        'conversion en numerique
+        num = Val(szi)
+        
+        ires = i * num
+        While (ires > 9)
+            div = Int(ires / 10)
+            ires = div + (ires Mod 10)
+        Wend
+    total = total + ires
+    End If
+Next i
+If total Mod 9 = 0 Then
+    FindClef = 9
+Else
+    FindClef = (total Mod 9)
+End If
+Exit Function
+
+ErrClef:
+Ret = MsgBox("Erreur " & Err.Number & " - " & Err.Description, vbCritical + vbOKOnly, _
+              "Clef")
+              
+              
+              
+End Function
+
+' Donne le numero de l hotel en fonction du controler
+Function GetNumHotel(ByVal chaine As String) As String
+On Error GoTo ErrGetNumHotel
+
+Dim Ret As Variant
+
+
+Select Case Int(chaine)
+
+ Case 195: GetNumHotel = "4"
+ Case 295: GetNumHotel = "5"
+ Case 395: GetNumHotel = "6"
+ Case 495: GetNumHotel = "7"
+ Case 595: GetNumHotel = "2"
+ Case 695: GetNumHotel = "3"
+ Case 795: GetNumHotel = "1"
+ 
+End Select
+Exit Function
+
+ErrGetNumHotel:
+Ret = MsgBox("Erreur " & Err.Number & " - " & Err.Description, vbCritical + vbOKOnly, _
+              "GetNumHotel")
+End Function
+
+' Donne le nom de l hotel en fonction du controler
+Function GetNomHotel(ByVal chaine As String) As String
+On Error GoTo ErrGetNomHotel
+
+Dim Ret As Variant
+
+
+Select Case Int(chaine)
+
+ Case 195: GetNomHotel = "Disneyland Hôtel"
+ Case 295: GetNomHotel = "Disney's Hotel New York"
+ Case 395: GetNomHotel = "Disney's Newport Bay Club"
+ Case 495: GetNomHotel = "Disney's Sequoia Lodge"
+ Case 595: GetNomHotel = "Disney's Hotel Cheyenne"
+ Case 695: GetNomHotel = "Disney's Hotel Sante Fe"
+ Case 795: GetNomHotel = "Disney's Davy Crockett Ranch"
+ 
+End Select
+Exit Function
+
+ErrGetNomHotel:
+Ret = MsgBox("Erreur " & Err.Number & " - " & Err.Description, vbCritical + vbOKOnly, _
+              "GetNomHotel")
+End Function
+
+'Recuperation de la langue en fonction des codes langues HIS
+Function GetCodeLangue(ByVal chaine As String) As String
+On Error GoTo ErrGetCodeLangue
+
+Dim Ret As Variant
+
+
+Select Case (chaine)
+
+ Case "F": GetCodeLangue = "fr"
+ Case "D": GetCodeLangue = "en"
+ Case "E": GetCodeLangue = "en"
+ Case "A": GetCodeLangue = "en"
+ Case "G": GetCodeLangue = "de"
+ Case "I": GetCodeLangue = "it"
+ Case "J": GetCodeLangue = "en"
+ Case "P": GetCodeLangue = "en"
+ Case "R": GetCodeLangue = "en"
+ Case "S": GetCodeLangue = "es"
+ Case "W": GetCodeLangue = "en"
+ ' apr defaut la langue est fr
+ Case Else: GetCodeLangue = "fr"
+ 
+End Select
+Exit Function
+
+ErrGetCodeLangue:
+Ret = MsgBox("Erreur " & Err.Number & " - " & Err.Description, vbCritical + vbOKOnly, _
+              "GetNumHotel")
+End Function
+
+'Fonction de Traitement de la pop-up de choix pour la création ou l annulation d un media
+Sub ChoixTrtSmed()
+On Error GoTo errChoixTrtSmed
+Dim Ret As Variant
+Dim Smedscreen As Boolean
+
+Smedscreen = False
+
+'On verifie que l on se trouve sur un ecran autorise
+If (RechercheEcran("* * *   C H A N G E   F O L I O   * * *", False) Or _
+    RechercheEcran("* * *   W A L K - I N   * * *", False) Or _
+    RechercheEcran("* * *   C H E C K - I N   * * *", False) Or _
+    RechercheEcran("* * *   N E W   R E S E R V A T I O N   * * *", False) Or _
+    RechercheEcran("* * *   C H A N G E   R E S E R V A T I O N   * * *", False) _
+    ) And _
+    RechercheEcran("CrCard", False) Then ' Appel de la fonction RechercheEcran
+  Smedscreen = True
+End If
+
+If Not Smedscreen Then
+
+  Ret = MsgBox("Vous n'êtes pas sur l'écran attendu pour produire/supprimer une carte media", _
+                vbInformation + vbOKOnly, "CallSmed - v1.0")
+  Exit Sub
+End If
+
+Load ChoixTrt
+ChoixTrt.Show
+
+Exit Sub
+errChoixTrtSmed:
+Ret = MsgBox("Erreur " & Err.Number & " - " & Err.Description, vbCritical + vbOKOnly, _
+              "ChoixTrtSmed")
+End Sub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
