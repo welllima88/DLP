@@ -1,6 +1,6 @@
  DLPCC
 
- Timestamp is 56deb0f6 (Tue Mar 08 12:01:10 2016)
+ Timestamp is 56e19329 (Thu Mar 10 16:30:49 2016)
 
  Preferred load address is 10000000
 
@@ -59,49 +59,49 @@
  0001:00000e20       ?DestroyMappingFile@@YAXPAX@Z 10001e20 f   apiDLPCC.obj
  0001:00000e70       ?Discard@@YA_NK@Z          10001e70 f   apiDLPCC.obj
  0001:00000ed0       ?Dlp_His@@YGHPAUCcPosMsgSend@@PAUStmPosMsgRecv@@@Z 10001ed0 f   apiDLPCC.obj
- 0001:00001010       ?Dlp_His_Canceled_Card@@YGHQAD0@Z 10002010 f   apiDLPCC.obj
- 0001:000014f0       ?Dlp_Stm@@YGHPAUCcPosMsgSend@@PAUStmPosMsgRecv@@@Z 100024f0 f   apiDLPCC.obj
- 0001:00001630       ?FormateChaine@@YAXQADJ@Z  10002630 f   apiDLPCC.obj
- 0001:000016a0       ?GetAxisCom@@YA_NPAD@Z     100026a0 f   apiDLPCC.obj
- 0001:000017c0       ?GetDateTime@@YGHPAUDLP_DATETIME@@@Z 100027c0 f   apiDLPCC.obj
- 0001:000018a0       ?GetTermFromON2@@YAHPAUCcPosInitSend@@UMsgToStratus@@@Z 100028a0 f   apiDLPCC.obj
- 0001:00001ca0       ?InitC3Admin@@YAXPAUCcPosInitSend@@PAUtpvMessIn@@@Z 10002ca0 f   apiDLPCC.obj
- 0001:00001d20       ?InitCarte@@YAXPAUCcPosInitSend@@PAUtpvMessIn@@@Z 10002d20 f   apiDLPCC.obj
- 0001:00001d80       ?InitCredit@@YAXPAUCcPosMsgSend@@PAUtpvMessIn@@@Z 10002d80 f   apiDLPCC.obj
- 0001:00002020       ?InitDebit@@YAXPAUCcPosMsgSend@@PAUtpvMessIn@@@Z 10003020 f   apiDLPCC.obj
- 0001:000022e0       ?InitDuplicata@@YAXPAUCcPosMsgSend@@PAUtpvMessIn@@@Z 100032e0 f   apiDLPCC.obj
- 0001:000023c0       ?InitLecture@@YAXPAUCcPosMsgSend@@PAUtpvMessIn@@@Z 100033c0 f   apiDLPCC.obj
- 0001:000024a0       ?InitLecturePiste@@YAXPAUCcPosMsgSend@@PAUtpvMessIn@@@Z 100034a0 f   apiDLPCC.obj
- 0001:000025f0       ?InitPersoSMED@@YAXPAUCcPosMsgSend@@PAUtpvMessIn@@@Z 100035f0 f   apiDLPCC.obj
- 0001:00002900       ?InitPreAuto@@YAXPAUCcPosMsgSend@@PAUtpvMessIn@@@Z 10003900 f   apiDLPCC.obj
- 0001:00002c00       ?InitTransSMED@@YAXPAUCcPosMsgSend@@PAUtpvMessIn@@@Z 10003c00 f   apiDLPCC.obj
- 0001:00002d90       ?InitVersion@@YAXPAUCcPosInitSend@@PAUtpvMessIn@@@Z 10003d90 f   apiDLPCC.obj
- 0001:00002df0       ?IsContextExist@@YAHPAD@Z  10003df0 f   apiDLPCC.obj
- 0001:00002e90       ?IsContextValid@@YAHPAD@Z  10003e90 f   apiDLPCC.obj
- 0001:00003010       ?IsDebugActivated@@YA_NPAD@Z 10004010 f   apiDLPCC.obj
- 0001:00003110       ?IsForceMonetic@@YA_NPAD@Z 10004110 f   apiDLPCC.obj
- 0001:00003210       ?IsPostePKG@@YA_NPAD@Z     10004210 f   apiDLPCC.obj
- 0001:00003310       ?IsPosteSTM@@YA_NPAD@Z     10004310 f   apiDLPCC.obj
- 0001:00003410       ?IsPosteVAD@@YA_NPAD@Z     10004410 f   apiDLPCC.obj
- 0001:000035a0       ?IsProtocoleResa@@YA_NPAD@Z 100045a0 f   apiDLPCC.obj
- 0001:000036a0       ?IsTicketActivated@@YA_NPAD@Z 100046a0 f   apiDLPCC.obj
- 0001:000037a0       ?MajSocketInC3Config@@YAXPAD0@Z 100047a0 f   apiDLPCC.obj
- 0001:00003a90       ?NATOF@@YANPADH@Z          10004a90 f   apiDLPCC.obj
- 0001:00003b10       ?ReadTicket@@YAHPAD0PAUtpvMessIn@@PAUtpvMessOut@@@Z 10004b10 f   apiDLPCC.obj
- 0001:00003cd0       ?ReadTicketDLRP@@YAHPAD0PAUCcPosMsgSend@@PAUCcPosMsgRecv@@@Z 10004cd0 f   apiDLPCC.obj
- 0001:000041d0       ?Receive@@YA_NKPADKH@Z     100051d0 f   apiDLPCC.obj
- 0001:00004250       ?Send@@YA_NPBDKH@Z         10005250 f   apiDLPCC.obj
- 0001:000042e0       ?StrReceive@@YA_NKPADK@Z   100052e0 f   apiDLPCC.obj
- 0001:000044a0       ?StrSend@@YA_NPBDK@Z       100054a0 f   apiDLPCC.obj
- 0001:000045d0       ?TraitePkg@@YA_NPADPAUCcPosMsgSend@@@Z 100055d0 f   apiDLPCC.obj
- 0001:00004d10       ?TraiteVad@@YA_NPADPAUCcPosMsgSend@@@Z 10005d10 f   apiDLPCC.obj
- 0001:00005040       ?VersionNumber@@YAXPAUtpvMessIn@@@Z 10006040 f   apiDLPCC.obj
- 0001:00005080       ?dateL@@YAXPAD@Z           10006080 f   apiDLPCC.obj
- 0001:000050e0       ?memchr@@YAPAXPAXHI@Z      100060e0 f i apiDLPCC.obj
- 0001:00005110       ?timeL@@YAXPAD@Z           10006110 f   apiDLPCC.obj
- 0001:00005160       _DlpCc_C3Admin             10006160 f   apiDLPCC.obj
- 0001:00005380       _DlpCc_init                10006380 f   apiDLPCC.obj
- 0001:000054a0       _Dlp_Cc                    100064a0 f   apiDLPCC.obj
+ 0001:00001000       ?Dlp_His_Canceled_Card@@YGHQAD0@Z 10002000 f   apiDLPCC.obj
+ 0001:000014e0       ?Dlp_Stm@@YGHPAUCcPosMsgSend@@PAUStmPosMsgRecv@@@Z 100024e0 f   apiDLPCC.obj
+ 0001:00001620       ?FormateChaine@@YAXQADJ@Z  10002620 f   apiDLPCC.obj
+ 0001:00001690       ?GetAxisCom@@YA_NPAD@Z     10002690 f   apiDLPCC.obj
+ 0001:000017b0       ?GetDateTime@@YGHPAUDLP_DATETIME@@@Z 100027b0 f   apiDLPCC.obj
+ 0001:00001890       ?GetTermFromON2@@YAHPAUCcPosInitSend@@UMsgToStratus@@@Z 10002890 f   apiDLPCC.obj
+ 0001:00001c90       ?InitC3Admin@@YAXPAUCcPosInitSend@@PAUtpvMessIn@@@Z 10002c90 f   apiDLPCC.obj
+ 0001:00001d10       ?InitCarte@@YAXPAUCcPosInitSend@@PAUtpvMessIn@@@Z 10002d10 f   apiDLPCC.obj
+ 0001:00001d70       ?InitCredit@@YAXPAUCcPosMsgSend@@PAUtpvMessIn@@@Z 10002d70 f   apiDLPCC.obj
+ 0001:00002010       ?InitDebit@@YAXPAUCcPosMsgSend@@PAUtpvMessIn@@@Z 10003010 f   apiDLPCC.obj
+ 0001:000022d0       ?InitDuplicata@@YAXPAUCcPosMsgSend@@PAUtpvMessIn@@@Z 100032d0 f   apiDLPCC.obj
+ 0001:000023b0       ?InitLecture@@YAXPAUCcPosMsgSend@@PAUtpvMessIn@@@Z 100033b0 f   apiDLPCC.obj
+ 0001:00002490       ?InitLecturePiste@@YAXPAUCcPosMsgSend@@PAUtpvMessIn@@@Z 10003490 f   apiDLPCC.obj
+ 0001:000025e0       ?InitPersoSMED@@YAXPAUCcPosMsgSend@@PAUtpvMessIn@@@Z 100035e0 f   apiDLPCC.obj
+ 0001:000028f0       ?InitPreAuto@@YAXPAUCcPosMsgSend@@PAUtpvMessIn@@@Z 100038f0 f   apiDLPCC.obj
+ 0001:00002bf0       ?InitTransSMED@@YAXPAUCcPosMsgSend@@PAUtpvMessIn@@@Z 10003bf0 f   apiDLPCC.obj
+ 0001:00002d80       ?InitVersion@@YAXPAUCcPosInitSend@@PAUtpvMessIn@@@Z 10003d80 f   apiDLPCC.obj
+ 0001:00002de0       ?IsContextExist@@YAHPAD@Z  10003de0 f   apiDLPCC.obj
+ 0001:00002e80       ?IsContextValid@@YAHPAD@Z  10003e80 f   apiDLPCC.obj
+ 0001:00003000       ?IsDebugActivated@@YA_NPAD@Z 10004000 f   apiDLPCC.obj
+ 0001:00003100       ?IsForceMonetic@@YA_NPAD@Z 10004100 f   apiDLPCC.obj
+ 0001:00003200       ?IsPostePKG@@YA_NPAD@Z     10004200 f   apiDLPCC.obj
+ 0001:00003300       ?IsPosteSTM@@YA_NPAD@Z     10004300 f   apiDLPCC.obj
+ 0001:00003400       ?IsPosteVAD@@YA_NPAD@Z     10004400 f   apiDLPCC.obj
+ 0001:00003590       ?IsProtocoleResa@@YA_NPAD@Z 10004590 f   apiDLPCC.obj
+ 0001:00003690       ?IsTicketActivated@@YA_NPAD@Z 10004690 f   apiDLPCC.obj
+ 0001:00003790       ?MajSocketInC3Config@@YAXPAD0@Z 10004790 f   apiDLPCC.obj
+ 0001:00003a80       ?NATOF@@YANPADH@Z          10004a80 f   apiDLPCC.obj
+ 0001:00003b00       ?ReadTicket@@YAHPAD0PAUtpvMessIn@@PAUtpvMessOut@@@Z 10004b00 f   apiDLPCC.obj
+ 0001:00003cc0       ?ReadTicketDLRP@@YAHPAD0PAUCcPosMsgSend@@PAUCcPosMsgRecv@@@Z 10004cc0 f   apiDLPCC.obj
+ 0001:000041c0       ?Receive@@YA_NKPADKH@Z     100051c0 f   apiDLPCC.obj
+ 0001:00004240       ?Send@@YA_NPBDKH@Z         10005240 f   apiDLPCC.obj
+ 0001:000042d0       ?StrReceive@@YA_NKPADK@Z   100052d0 f   apiDLPCC.obj
+ 0001:00004490       ?StrSend@@YA_NPBDK@Z       10005490 f   apiDLPCC.obj
+ 0001:000045c0       ?TraitePkg@@YA_NPADPAUCcPosMsgSend@@@Z 100055c0 f   apiDLPCC.obj
+ 0001:00004d00       ?TraiteVad@@YA_NPADPAUCcPosMsgSend@@@Z 10005d00 f   apiDLPCC.obj
+ 0001:00005030       ?VersionNumber@@YAXPAUtpvMessIn@@@Z 10006030 f   apiDLPCC.obj
+ 0001:00005070       ?dateL@@YAXPAD@Z           10006070 f   apiDLPCC.obj
+ 0001:000050d0       ?memchr@@YAPAXPAXHI@Z      100060d0 f i apiDLPCC.obj
+ 0001:00005100       ?timeL@@YAXPAD@Z           10006100 f   apiDLPCC.obj
+ 0001:00005150       _DlpCc_C3Admin             10006150 f   apiDLPCC.obj
+ 0001:00005370       _DlpCc_init                10006370 f   apiDLPCC.obj
+ 0001:00005490       _Dlp_Cc                    10006490 f   apiDLPCC.obj
  0001:00007460       _Protocole_Revelation@32   10008460 f   apiDLPCC.obj
  0001:00007620       _Test                      10008620 f   apiDLPCC.obj
  0001:000076a0       ?FormateCommitCreditPourResa@@YA_NPAUCcPosMsgSend@@PAUON2_REFUND@@PAUSTM_DATETIME@@PAUON2_COMMIT@@@Z 100086a0 f   apiOn2.obj
@@ -3566,10 +3566,10 @@
  0000:fff7f000       .debug$S                   10000000     kernel32:KERNEL32.dll
  0000:fff7f000       .debug$S                   10000000     kernel32:KERNEL32.dll
  0000:fff7f000       .debug$S                   10000000     kernel32:KERNEL32.dll
- 0001:000073d8       $LN167                     100083d8     apiDLPCC.obj
- 0001:000073f8       $LN165                     100083f8     apiDLPCC.obj
- 0001:00007430       $LN168                     10008430     apiDLPCC.obj
- 0001:00007444       $LN166                     10008444     apiDLPCC.obj
+ 0001:000073e0       $LN168                     100083e0     apiDLPCC.obj
+ 0001:00007400       $LN166                     10008400     apiDLPCC.obj
+ 0001:00007438       $LN169                     10008438     apiDLPCC.obj
+ 0001:0000744c       $LN167                     1000844c     apiDLPCC.obj
  0001:00007660       _localtime                 10008660 f   apiDLPCC.obj
  0001:00007680       _time                      10008680 f   apiDLPCC.obj
  0001:00009880       _localtime                 1000a880 f   apiOn2.obj

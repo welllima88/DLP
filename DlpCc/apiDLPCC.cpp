@@ -1054,19 +1054,21 @@ extern "C" DLPCCDLL_API int Dlp_Cc(lpCcPosMsgSend lpGalxSend,
 	strncpy(szPan, out.cPan, sizeof(out.cPan) );
 	limit = (char *)memchr(out.cPan, '?', sizeof(out.cPan) );
 
-	if (limit == 0x00)
-	{
-		memcpy (lpGalxRecv->bPanNum, out.cPan, sizeof(out.cPan));
-		memset(&lpGalxRecv->bPanNum[10],'?',sizeof(lpGalxRecv->bPanNum)-6 );
-	}
-	else
-	{
-		memset(lpGalxRecv->bPanNum,'?',sizeof(lpGalxRecv->bPanNum) );
-		Ret = limit - out.cPan ;
-		memcpy (&lpGalxRecv->bPanNum[sizeof(out.cPan) - Ret], out.cPan, Ret);
-		memset(&lpGalxRecv->bPanNum[sizeof(out.cPan) - Ret+10],'?',sizeof(lpGalxRecv->bPanNum)-6 );
-	}
+	if ( lpGalxSend->aOperation[0] != 'z' ){
 
+		if (limit == 0x00)
+		{
+			memcpy (lpGalxRecv->bPanNum, out.cPan, sizeof(out.cPan));
+			memset(&lpGalxRecv->bPanNum[10],'?',sizeof(lpGalxRecv->bPanNum)-6 );
+		}
+		else
+		{
+			memset(lpGalxRecv->bPanNum,'?',sizeof(lpGalxRecv->bPanNum) );
+			Ret = limit - out.cPan ;
+			memcpy (&lpGalxRecv->bPanNum[sizeof(out.cPan) - Ret], out.cPan, Ret);
+			memset(&lpGalxRecv->bPanNum[sizeof(out.cPan) - Ret+10],'?',sizeof(lpGalxRecv->bPanNum)-6 );
+		}
+	}
 	//  Test de la réponse
 
 	if (memcmp (out.cC3Error, "0000", 4) != 0)
@@ -1237,9 +1239,6 @@ DLPCCDLL_API BOOL WINAPI Dlp_His(lpCcPosMsgSend lpGalxSend,
 	//memset(lpGalxRecv->bPanNum,'?',sizeof(lpGalxRecv->bPanNum) );
 	memcpy (HISGalxRecv->bResponseCode , szCcPosMsgRecv.bResponseCode, sizeof(szCcPosMsgRecv.bResponseCode));
 	memcpy (HISGalxRecv->bSignature , szCcPosMsgRecv.bSignature, sizeof(szCcPosMsgRecv.bSignature));
-
-
-	memset(lpGalxSend, 0x00, sizeof(CcPosMsgSend));
 
 
 	return bHis;
