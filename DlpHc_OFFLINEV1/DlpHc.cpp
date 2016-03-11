@@ -13,6 +13,7 @@ H I S T O R I Q U E   D E S   M O D I F I C A T I O N S
 :   4.7    : 20/11/07 :   SJU  :  Dlp_Hc_Revelation, Tous les terminaux sont renseignés avec le register
 :   4.8    : 02/06/08 :   SJU  :  Ajouter Point d'entrée EncoDeco pour cryptage / décryptage
 :   4.9    : 07/08/15     NM   :  Ajout du C3
+:   4.9    : 02/03/16     NM   :  Ajout des fonctionnalités Ingenico pour SM
 :----------:----------:--------:------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------*/
 #include <memory.h>
@@ -362,7 +363,6 @@ extern "C" DllExport void __cdecl Dlp_Hc(S1 &HcPosMsgSend,
 	S1 * hpms = &HcPosMsgSend;
 	hpmr = &HcPosMsgRecv;
 	FILE *fp ;
-	lpCcPosInitSend msg; // test C3 NM
 	char line [18], hostName [13];
 	char Port[5];
 	char *args[2], Prog[80];
@@ -371,9 +371,9 @@ extern "C" DllExport void __cdecl Dlp_Hc(S1 &HcPosMsgSend,
 	int Ret, getkey;
 	static char   sztmp[4]; 
 	char Msg[255], szMontantE[11], szMontantD[3];
-	char szC3Cfg[32]; // test C3 NM
+	char szC3Cfg[32]; 
 	bool dlphcc3 = false;
-
+	char customerp;
 	S3 * stratusQueryMsg = new S3;
 	S4 * stratusReplyMsg = new S4;
 
@@ -384,16 +384,11 @@ extern "C" DllExport void __cdecl Dlp_Hc(S1 &HcPosMsgSend,
 	memset (szC3Cfg,'\0',sizeof(szC3Cfg)); // test C3 NM
 	sprintf (szC3Cfg, "%s.", "c3Config"); // test C3 NM
 
-	memset(&msg, 0x00, sizeof(msg)); // test C3 NM
 	memset(HcMsg,'\0',sizeof(HcMsg));
 	memset(HcRep,'\0',sizeof(HcRep));
 	memset(ConfigSocket,'\0',sizeof(ConfigSocket));
 	memset(ConfigHost,'\0',sizeof(ConfigHost));
 
-	//*pGetSecurity = NULL;
-	//*pGetKey = NULL;
-	//*pGetStringFromKeyboard = NULL; 
-	//*pPos_display = NULL;
 
 	if (IsForceMonetic(szC3Cfg)){
 		pGetSecurity = NULL;
@@ -435,11 +430,6 @@ extern "C" DllExport void __cdecl Dlp_Hc(S1 &HcPosMsgSend,
 		strncpy (szMontantE, hpms->aAmount, sizeof(hpms->aAmount)-2);
 		strncpy (szMontantD, &hpms->aAmount[sizeof(hpms->aAmount)-2], 2);
 
-		// Pour tester les fonctionnalitées du C3 
-		// Cas SMED appel de C3 pour récuperer le numero HC
-		// effectuer la condtion sur la variable customerpresent
-
-
 
 		sprintf (Msg, "N° Hotel Charge : %s  -  Montant : %d,%s \0", szPan, atoi(szMontantE), szMontantD);
 		DLP_Pos_display(Msg,strlen(Msg),0);
@@ -462,7 +452,7 @@ extern "C" DllExport void __cdecl Dlp_Hc(S1 &HcPosMsgSend,
 	else Pos_display = *pPos_display;
 
 	fflush(0);
-	Pos_display("Hotel Charge v6.1 - 27 janvier 2016",35,0);
+	Pos_display("Hotel Charge v6.1a - 7 mars 2016",32,0);
 
 	if (!(CheckContext(hpms,s))) 
 
@@ -474,13 +464,20 @@ extern "C" DllExport void __cdecl Dlp_Hc(S1 &HcPosMsgSend,
 		return;
 	}	
 
+
+	// spécificité SM 
 	if( strcmp(hpms->aChargeNum, "000000000") == 0  ){
+		customerp = hpms->aCustomerPresent;
 		hpms->aCustomerPresent = 'P';
+		
+		// appel de la fonction recuperant HC sur la carte
 		dlphcc3 = GetHCIDFromTPE(hpms, 'z', Pos_display);
 		if (dlphcc3 == FALSE){
 			return;
 		}
-		hpms->aCustomerPresent = '1';
+
+		// Le customerpresent est remis a sa valeur initial 
+		hpms->aCustomerPresent = customerp;
 
 	}
 
@@ -2009,7 +2006,7 @@ void CreateHcCtxDlp(char *fConfig, char *fNewConfig, MsgFromStratus Msg)
 	char line [128], lineNew[128], szBuf[50], Cible[12], HcCtxDlp[16];
 	int  lg, ret ;
 	char  devTcp [32], hostName [32];
-	int short hostPort ;
+	int hostPort ;
 
 	Pos_display("Création du contexte",20,0);
 	memset(Cible, '\0', sizeof(Cible));
@@ -2036,7 +2033,7 @@ void CreateHcCtxDlp(char *fConfig, char *fNewConfig, MsgFromStratus Msg)
 			/* line   ->  Interface:hostName:hostPort */
 			Pos_display("Récupération  de la socket",26,0);
 			strcpy(szBuf, line+lg+1);
-			ret = sscanf(szBuf ,"%s %s %d", devTcp,hostName, & hostPort);
+			ret = sscanf(szBuf ,"%s %s %d", devTcp,hostName, &hostPort);
 			sprintf (lineNew, "STRATUS_COM=%s %s %4.4s \n", devTcp, hostName, Msg.riSocket ); 
 			Pos_display(lineNew,strlen(lineNew),0);
 			//strncpy(lineNew, line, strlen(line));
@@ -2173,7 +2170,7 @@ extern "C" DllExport void __cdecl Dlp_Hc_Revelation(S5 &HcRevelationMsgSend,
 	static char   sztmp[4]; 
 	char Msg[255], szMontantE[11], szMontantD[3];
 	bool dlphcc3;	
-
+	char customerp;
 	S1 shpms;
 	S1 *hpms1 = &shpms;
 
@@ -2259,7 +2256,7 @@ extern "C" DllExport void __cdecl Dlp_Hc_Revelation(S5 &HcRevelationMsgSend,
 
 	fflush(0);
 
-	Pos_display("Hotel Charge Revelation v5.4 - 27 janvier 2016",46,0);
+	Pos_display("Hotel Charge Revelation v6.1a - 7 mars 2016",43,0);
 	
 	if (!(CheckContext(hpms1,s))) 
 
@@ -2272,21 +2269,21 @@ extern "C" DllExport void __cdecl Dlp_Hc_Revelation(S5 &HcRevelationMsgSend,
 
 
 	// Cas SMED appel de C3 pour récuperer le numero HC
-	// ajouter par NMI 
 	if(hpms->rCustomerPresent == '9' ){
-		//DLP_Pos_display("Cas Smart Media",15,0);
+
+		// on save la variable pour la réassigner après
+		customerp = hpms->rCustomerPresent;
 		hpms->rCustomerPresent = 'P';
 		dlphcc3 = GetHCIDFromTPERevelation(hpms, 'z', Pos_display);
 		if (dlphcc3 == FALSE){
 			return;
 		}
-		hpms->rCustomerPresent = '1';
-		hpms1->aCustomerPresent = '1';
+		hpms->rCustomerPresent = customerp;
+		hpms1->aCustomerPresent = customerp;
 		memcpy(hpms1->aChargeNum, hpms->rChargeNum, sizeof(hpms->rChargeNum));
 	}
-
-
-	// fin d'ajout
+	
+	// fin particularité SMED
 
 	strncpy (szPan, hpms->rChargeNum, sizeof(hpms->rChargeNum));
 
@@ -3354,15 +3351,16 @@ void InitTransSMED(S1* Galaxy, struct tpvMessIn *c3)
 	memcpy (c3->cOperation, "z", 1);
 	memcpy (c3->cAmount, Galaxy->aAmount, 12); 
 	memcpy (c3->cCurrencyCode, Galaxy->aCurrencyCode, 3);
+	
 	if ( Galaxy->aOperation == 'c' ){
-		memcpy(tag, "R5CA0", 5);
+		memcpy(tag, "R5CA0", 5); // tag pour un crédit
 	}
 	else{
-		memcpy(tag, "R5AA0", 5);
+		memcpy(tag, "R5AA0", 5); // tag pour un débit
 	}
 
 	memcpy (c3->cTenderType, "+P", 2);	//typage ppour déterminer la personnalisation ou la transaction
-	memcpy (c3->cReaderType, "0 ", 2);	// Lecture effectuée par C3, correspondant a un type de carte
+	memcpy (c3->cReaderType, "0 ", 2);	// Lecture effectuée par C3, 0 lecture carte, 1 on ne lit pas la carte
 
 	memset(c3->cTermNum, '0', sizeof(c3->cTermNum));
 	memcpy (&c3->cTermNum[0], Galaxy->aCtrlNum, 4);     // n° de controleur
@@ -3372,13 +3370,9 @@ void InitTransSMED(S1* Galaxy, struct tpvMessIn *c3)
 	memset(c3->cCashNum, '0', sizeof(c3->cCashNum));    
 	memcpy (&c3->cCashNum[1], Galaxy->aCashNum, 7);		// n° caissière
 
-	//memcpy (c3->cPan, 0x00, sizeof(c3->cPan));
-
 	//-------------------------
 	// Début Particularités DLP
 	//-------------------------
-	//memset(c3->cUserData1, '0', sizeof(c3->cUserData1));    
-	//memset(c3->cUserData2, '0', sizeof(c3->cUserData2)); 
 
 	// Tag de lecture correspondant à l'HC ( cf table des tags)
 	memcpy(c3->cUserData1, tag, 5);
@@ -3399,14 +3393,14 @@ void InitTransSMEDRevelation(S5* Revelation, struct tpvMessIn *c3)
 	memcpy (c3->cOperation, "z", 1);
 	memcpy (c3->cAmount, Revelation->rAmount, sizeof(Revelation->rAmount)); 
 	if ( Revelation->rOperation == 'c' ){
-		memcpy(tag, "R5CA0", 5);
+		memcpy(tag, "R5CA0", 5); // tag pour effectuer un credit
 	}
 	else{
-		memcpy(tag, "R5AA0", 5);
+		memcpy(tag, "R5AA0", 5); // tag pour effectuer un debit
 	}
 	memcpy (c3->cCurrencyCode, Revelation->rCurrencyCode, 3);
 
-	memcpy (c3->cTenderType, "+P", 2);	  			    //typage ppour déterminer la transaction
+	memcpy (c3->cTenderType, "+P", 2);	//typage ppour déterminer la transaction
 	memcpy (c3->cReaderType, "0 ", 2);	// Lecture effectuée par C3
 
 	memset(c3->cTermNum, '0', sizeof(c3->cTermNum));
@@ -3417,13 +3411,10 @@ void InitTransSMEDRevelation(S5* Revelation, struct tpvMessIn *c3)
 	memset(c3->cCashNum, '0', sizeof(c3->cCashNum));    
 	memcpy (&c3->cCashNum[1], Revelation->rCashNum, 7);		// n° caissière
 
-	//memcpy (c3->cPan, 0x00, sizeof(c3->cPan));
 
 	//-------------------------
 	// Début Particularités DLP
 	//-------------------------
-	//memset(c3->cUserData1, '0', 32);    
-	//memset(c3->cUserData2, 0x20, sizeof(c3->cUserData2));  
 
 	// Tag de lecture correspondant à l'HC ( cf table des tags)
 	strncpy(c3->cUserData1, tag, 5);
@@ -3440,7 +3431,7 @@ void InitTransSMEDRevelation(S5* Revelation, struct tpvMessIn *c3)
 /**********************************************************************************/
 /*  NM, le 07/08/2015															  */
 /*																				  */
-/*  Fonction : Activation du TPE pour récuperer l'id à partir du TPE		      */
+/*  Fonction : Activation du TPE pour récuperer HC à partir du TPE		      */
 /*																				  */
 /*  Retour   : TRUE or FALSE
 /*																				  */
@@ -3453,12 +3444,14 @@ extern "C" DllExport bool GetHCIDFromTPE(S1* msgsend, int ordre,  void (*pPos_di
 	int    Ret, szMsg, size;
 	char   sztmp[4], sztoread[2];
 	char retMsg[255];
+	int i;
 
 	memset(retMsg, 0x00, 255);
 
 	//if (*pPos_display == NULL) pPos_display = DLP_Pos_display;
 
 	Ret = TRUE;
+	// initialise le TPE 
 	CheckInit(msgsend , &in, Pos_display);
 
 	switch (ordre)
@@ -3468,6 +3461,7 @@ extern "C" DllExport bool GetHCIDFromTPE(S1* msgsend, int ordre,  void (*pPos_di
 		switch(msgsend->aCustomerPresent)
 		{
 		case 'P' :
+			// initialisation de la structure c3 avec les informations de la caisse
 			InitTransSMED(msgsend, &in);
 			break;
 		}
@@ -3476,19 +3470,15 @@ extern "C" DllExport bool GetHCIDFromTPE(S1* msgsend, int ordre,  void (*pPos_di
 		return FALSE;
 	}
 
-	
+	// appel du c3
 	c3dll (&in, &out, GetSecurity, GetKey, GetStringFromKeyboard, Pos_display, DLP_PrintTicket);
-	
-	//Ret = MessageBox(NULL, (char *) &in, "Vers C3", MB_OK);//SJ debug
 
-	//Ret = MessageBox(NULL, (char *) &out, "Retour C3", MB_OK); //SJ debug
-
-	//  Test de la réponse
+	//  Test de la réponse du c3
 	if (memcmp (out.cC3Error, "0000", 4) != 0)
 	{   
 		sprintf (retMsg,"c3Error = %4.4s c3ResponseCode = %4.4s", out.cC3Error, out.cReponseCode);
 		Pos_display(retMsg,strlen(retMsg),0);
-		// carte bloquée 
+		// cas d une carte bloquée 
 		if ( (memcmp(out.cC3Error, "0111", 4) == 0) && (memcmp(out.cReponseCode, "0017", 4) == 0)){
 			memset(retMsg, 0x00, sizeof(retMsg));
 			sprintf (retMsg,"CARTE BLOQUEE");
@@ -3496,7 +3486,6 @@ extern "C" DllExport bool GetHCIDFromTPE(S1* msgsend, int ordre,  void (*pPos_di
 			Sleep(2000);
 		}
 		
-		//sscanf( out.cC3Error, "%4d", &Ret );
 		fflush(0); //5.2
 		CloseMonetic(0);
 		Close(); 
@@ -3512,7 +3501,14 @@ extern "C" DllExport bool GetHCIDFromTPE(S1* msgsend, int ordre,  void (*pPos_di
 	sztoread[1] = out.cUserData1[5];
 
 	if( (size = todigit(sztoread, 2)) != -1){
-		memcpy(msgsend->aChargeNum, &out.cUserData1[6], size);
+		i = 6;
+		//si HC a ete padde avec des 0 dans HIS on ne les prend pas en compte pour les retourner a la caisse
+		while(memcmp(&out.cUserData1[i], "0", 1) == 0){
+			i++;
+			size--;
+		}
+		memset(msgsend->aChargeNum, 0x00, sizeof(msgsend->aChargeNum));
+		memcpy(msgsend->aChargeNum, &out.cUserData1[i], size);
 	}
 
 
@@ -3530,11 +3526,13 @@ extern "C" DllExport bool GetHCIDFromTPERevelation(S5* msgsend, int ordre,  void
 	int    Ret, szMsg, size;
 	char   sztmp[4], sztoread[2];
 	char retMsg[255];
-
+	int i;
 
 	memset(sztoread, 0x00, 2);
 	memset(retMsg, 0x00, 255);
 	Ret = TRUE;
+
+	// initialise le TPE
 	CheckInit(msgsend , &in, Pos_display);
 
 
@@ -3545,6 +3543,7 @@ extern "C" DllExport bool GetHCIDFromTPERevelation(S5* msgsend, int ordre,  void
 		switch(msgsend->rCustomerPresent)
 		{
 		case 'P' :
+			// initialisation de la structure c3 avec les infos caisse recu
 			InitTransSMEDRevelation(msgsend, &in);
 			break;
 		}
@@ -3553,19 +3552,15 @@ extern "C" DllExport bool GetHCIDFromTPERevelation(S5* msgsend, int ordre,  void
 		return FALSE;
 	}
 
+	// appel c3
 	c3dll (&in, &out, GetSecurity, GetKey, GetStringFromKeyboard, Pos_display, DLP_PrintTicket);
 	
-	
-	//Ret = MessageBox(NULL, (char *) &in, "Vers C3", MB_OK);//SJ debug
-
-	//Ret = MessageBox(NULL, (char *) &out, "Retour C3", MB_OK); //SJ debug
 
 	//  Test de la réponse
 	if (memcmp (out.cC3Error, "0000", 4) != 0)
 	{   
 		sprintf (retMsg,"c3Error = %4.4s c3ResponseCode = %4.4s", out.cC3Error, out.cReponseCode);
 		Pos_display(retMsg,strlen(retMsg),0);
-		//sscanf( out.cC3Error, "%4d", &Ret );
 		CloseMonetic(0);
 		Close(); 
 		return FALSE;
@@ -3577,13 +3572,20 @@ extern "C" DllExport bool GetHCIDFromTPERevelation(S5* msgsend, int ordre,  void
 	}
 
 	// Recupérer numéro HC grâce au TAG dans cUserData
-
-	// memcpy(msgsend->aChargeNum, out.cUserData1, sizeof msgsend->aChargeNum);
 	sztoread[0] = out.cUserData1[4];
 	sztoread[1] = out.cUserData1[5];
 
 	if( (size = todigit(sztoread, 2)) != -1){
-		memcpy(msgsend->rChargeNum, &out.cUserData1[6], size);
+		i = 6;
+		
+		//si HC a ete padde avec des 0 dans HIS on les prend pas en compte
+		while(memcmp(&out.cUserData1[i], "0", 1) == 0){
+			i++;
+			size--;
+		}
+		memset(msgsend->rChargeNum, 0x00, sizeof(msgsend->rChargeNum));
+		memcpy(msgsend->rChargeNum, &out.cUserData1[i], size);
+	
 	}
 
 

@@ -1,157 +1,157 @@
-﻿La génération a démarré 26/02/2016 15:16:52.
+﻿La génération a démarré 10/03/2016 13:49:57.
      1>Projet "C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\DlpHc.vcxproj" sur le nœud 2 (Build cible(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D DLPHC_EXPORTS /D _VC80_UPGRADE=0x0600 /D _USING_V110_SDK71_ /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\\" /Fd"./vc110.pdb" /FR"./" /Gd /TP /analyze- /errorReport:prompt DlpHc.cpp
          DlpHc.cpp
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(101): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(102): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(108): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(109): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(187): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(188): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(193): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(194): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : voir la déclaration de 'sscanf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(194): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(195): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(196): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(197): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(224): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(225): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : voir la déclaration de 'strcpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(227): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(228): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
      1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(385): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(435): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(430): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(436): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(431): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(444): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(434): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(491): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(488): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(1431): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(1428): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(115) : voir la déclaration de 'strcat'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(1480): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(1477): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(115) : voir la déclaration de 'strcat'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(1806): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(1803): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(1807): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(1804): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(1821): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(1818): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(1879): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(1876): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(1881): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(1878): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(1993): warning C4996: '_open': This function or variable may be unsafe. Consider using _sopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(1990): warning C4996: '_open': This function or variable may be unsafe. Consider using _sopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\io.h(243) : voir la déclaration de '_open'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2018): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2015): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2020): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : voir la déclaration de 'fopen'
      1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2023): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : voir la déclaration de 'fopen'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2026): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : voir la déclaration de 'fopen'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2038): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2035): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : voir la déclaration de 'strcpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2039): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2036): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : voir la déclaration de 'sscanf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2040): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2037): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2046): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2043): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2051): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2048): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2053): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2050): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2077): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2074): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2078): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2075): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2079): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2076): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2084): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2081): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : voir la déclaration de 'fopen'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2093): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2090): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : voir la déclaration de 'strcpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2094): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2091): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : voir la déclaration de 'sscanf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2102): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2099): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : voir la déclaration de 'strcpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2103): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2100): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : voir la déclaration de 'sscanf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2111): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2108): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(110) : voir la déclaration de 'strcpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2112): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2109): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : voir la déclaration de 'sscanf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2198): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2195): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2238): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2235): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2239): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2236): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2242): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2239): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2291): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2288): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2294): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2291): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2649): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2646): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2788): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2785): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : voir la déclaration de 'fopen'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2929): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2926): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2949): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(2946): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3004): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3001): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3006): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3003): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : voir la déclaration de 'fopen'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3015): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3012): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\time.inl(112) : voir la déclaration de 'localtime'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3016): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3013): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3048): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3045): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3059): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3056): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3060): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3057): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3061): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3058): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3062): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3059): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(182) : voir la déclaration de 'strncat'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3063): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3060): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(182) : voir la déclaration de 'strncat'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3139): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3136): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3148): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3145): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3149): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3146): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3150): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3147): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(182) : voir la déclaration de 'strncat'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3151): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3148): warning C4996: 'strncat': This function or variable may be unsafe. Consider using strncat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(182) : voir la déclaration de 'strncat'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3224): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3221): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : voir la déclaration de 'fopen'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3237): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3234): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\time.inl(112) : voir la déclaration de 'localtime'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3238): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3235): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3331): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3328): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3429): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3420): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3489): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3479): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3494): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3484): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3566): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3562): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : voir la déclaration de 'sprintf'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3626): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3628): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\string.h(191) : voir la déclaration de 'strncpy'
-     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3631): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>c:\users\nmiel\documents\dlphc_offlinev1\dlphc.cpp(3633): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : voir la déclaration de 'fopen'
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /OUT:"C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\testHc_console\DlpHc.dll" /INCREMENTAL /NOLOGO dlpc3dll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:"dlphc.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\testHc_console/DlpHc.pdb" /SUBSYSTEM:WINDOWS,"5.01" /STACK:"8","8" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\testHc_console/DlpHc.lib" /MACHINE:X86 /SAFESEH /DLL C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\DlpHc.res
@@ -160,11 +160,6 @@
          .\VB6_testDLL/StdAfx.obj
          dlpc3dll.lib
          Wsock32.lib
-     1>DlpHc.obj : warning LNK4075: ' /EDITANDCONTINUE' ignorÚ Ó cause de la spÚcification '/SAFESEH'
-     1>dlphc.def(10): warning LNK4017: instruction DESCRIPTION non prise en charge dans la plateforme cibleá; instruction ignorÚe
-            CrÚation de la bibliothÞque C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\testHc_console/DlpHc.lib et de l'objet C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\testHc_console/DlpHc.exp
-     1>testHc_console.obj : warning LNK4217: symbole dÚfini localement _Dlp_Hc importÚ dans la fonction _main
-     1>testHc_console.obj : warning LNK4217: symbole dÚfini localement _Dlp_Hc_Revelation importÚ dans la fonction _main
          DlpHc.vcxproj -> C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\testHc_console\DlpHc.dll
        BscMake:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\bscmake.exe /nologo /o"C:\Users\nmiel\Documents\DlpHc_OFFLINEV1\testHc_console/DlpHc.bsc" ./DlpHc.sbr ./testHc_console.sbr VB6_testDLL/StdAfx.sbr
@@ -172,4 +167,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:03.86
+Temps écoulé 00:00:13.75
